@@ -21,11 +21,17 @@ export const Logo = Styled.span`
 
 export const Menu = Styled.ul`
 margin-top:60px;
+padding-left:0px;
     li{
         display:block;
         width: 255px;
         height: 56px;
+        line-height:56px;
         left: 0px;
-        top: 128px;           
+        top: 128px;  
+        color:#A4A6B3;
+        font-size:16px;
+        font-family:Mulish;
+        border-left:3px solid ${props => props.selected == true ? "#1B98A7" : "#363740"};         
     }
 `

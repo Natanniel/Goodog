@@ -8,7 +8,12 @@ function menu() {
             <Sidebar>
                 <Logo />
                 <Menu>
-                    <li>teste</li>
+                    <li selected={true}>Dashboard</li>
+                    <li>Aprovação</li>
+                    <li>Reclamações</li>
+                    <li>Clientes</li>
+                    <li>Guardiões</li>
+                    <li>Usuários</li>
                 </Menu>
             </Sidebar>
         </div>

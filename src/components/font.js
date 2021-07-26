@@ -4,6 +4,8 @@ import { createGlobalStyle } from 'styled-components'
 import InterRegular from '../assets/font/inter/Inter-Regular.ttf';
 import InterBold from '../assets/font/inter/Inter-Bold.ttf';
 
+import MulishRegular from '../assets/font/mulish/Mulish-Regular.ttf';
+
 
 export const GlobalStyle = createGlobalStyle`  
    @font-face {
@@ -14,6 +16,11 @@ export const GlobalStyle = createGlobalStyle`
     @font-face {
       font-family: 'Inter-bold';
       src: url(${InterBold});
+     }
+
+     @font-face {
+      font-family: 'Mulish';
+      src: url(${MulishRegular});
      }
 `;
 
