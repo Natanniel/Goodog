@@ -53,7 +53,7 @@ export const SubTitulo = Styled.span`
 export const Box = Styled.div`
     margin:0 auto;
     margin-top:11px;
-    height: 408px;
+    height: 224px;
     width: 418px;
     left: 511px;
     top: 225px;
@@ -72,7 +72,7 @@ export const Label = Styled.span`
     color:#000;
     height:34px;
     line-height:34px;
-    font-family: Inter-bold;
+    font-family: Inter-bold
 `
 
 export const Input = Styled.input`
@@ -83,22 +83,19 @@ export const Input = Styled.input`
     width:100%;
     border:1px solid #EFF0F6;
     border-radius:8px;
-    height:44px;
+    height:44px;    
     text-indent:10px;
+    
     padding: 0px;
 `
 
 export const RecoverPassword = Styled.span`
     display:block;
     margin-top:20px;
-    a{
-        display:block;
-        text-decoration:none;
-        color:#1B98A7;
-        height: 34px;
-        line-height:34px;
-        font-size:14px;  
-    }
+    height: 34px;
+    line-height:34px;
+    color:#1B98A7;
+    font-size:14px;
 `
 
 export const CheckboxDiv = Styled.div`
@@ -122,15 +119,15 @@ export const LabelCheckbox = Styled.label`
 
 export const BtnEntrar = Styled.button`
     display:block;
+    width: 100%;
     margin:0 auto;
     padding: 10px 20px;
-    width: 100%;
     height: 44px;
     margin-top:20px;
     text-align:center;
     color:#fff;
     background:#1B98A7;
-    border: none;
+    border: 1px solid #1B98A7;
     border-radius:4px;
     font-family:Inter;
     cursor:pointer;
