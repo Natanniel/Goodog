@@ -1,6 +1,8 @@
 import Styled from 'styled-components';
-import BackgroundRetangle from '../../../assets/img/homeRetangle.png';
-import ArrowDown from '../../../assets/icons/arrow-down.png';
+import Star from '../../../assets/icons/star.png';
+import Heart from '../../../assets/icons/heart.png';
+import ProfileImg from '../../../assets/img/profileCarla.png';
+import Tobby from '../../../assets/icons/tobby.png';
 
 import BG from './asset/p.png';
 
@@ -14,180 +16,174 @@ export const Content = Styled.div`
     margin-top:8px;
 `
 
-export const Retangle = Styled.div`
+export const Titulo = Styled.span`
     display:block;
-    width: 1132px;
-    height: 522px;
-    background:url(${BackgroundRetangle});
-    position:relative;
-    margin:0 auto;
-    left: 0;
-    right: 0;
-    margin-top:40px;
-`
-
-export const BoxRetangle = Styled.div`
-    width: 966px;
-    height: 188px;
-    margin:0 auto;
-    left:0px;
-    right:0px;
-    position:absolute;
-    top:441px;
-    background:#fff;
-    border-radius:15px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
-`
-
-export const Titulo2 = Styled.h2`
-    display:block;
-    margin:0 auto;
-    font-size: 34px;
-    margin-top: 161px;
-    text-align:center;
     font-size:34px;
-`
-
-export const Subtitulo2 = Styled.span`
-    display:block;
-    width: 545px;
-    text-align:center;
-    margin:0 auto;
-    font-size:16px;
-    margin-top:26px;
-`
-
-export const Container = Styled.section`
-    width:966px; 
-    display:block;
-    margin:0 auto;
-`
-
-export const SectionCards = Styled.section`
-    display:inline-block;
-    margin-top:53px;
-
-`
-
-export const Card = Styled.div`
-    float:left;
-    height: 248px;
-    width: 230px;
-    border-radius: 4px;
-    border: 1px solid #0000001F;
-    margin-right:10px;
-`
-
-export const IconCard = Styled.img`
-    display:block;
-    margin:0 auto;
-    height:48px;
-    width:48px;
-    margin-top:32px;
-`
-
-export const CardTitle = Styled.span`
-    display:block;
-    text-align: center;
-    font-size:20px;
-    margin-top:20px;
-`
-
-export const CardSubtitle = Styled.span`
-    display:block;
-    width: 165px;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
-    text-align:center;
-    margin:0 auto;
-    margin-top:8px;
-    height:40px;
-`
-
-export const CardButton = Styled.span`
-    cursor:pointer;
-    display:block;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin:0 auto;
-    margin-top:15px;
-    padding: 10px 15px;
-    width:119px;
-    height:36px;
-    text-align:center;
-`
-
-export const BoxQuestion = Styled.div`
-    display:'block';
-    height:80px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius:4px;
     color: rgba(0, 0, 0, 0.87);
-    font-size: 20px;
-    line-height: 80px;
-    text-indent:24px;
+    font-family:Poppins;
+    margin-top:24px;
+`
+
+
+export const CardUser = Styled.section`
+    height: 164px;
+    width: 638px;
+    border-radius: 5px;
     margin-top:16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+`
+
+export const Profile = Styled.div`
+    background:url(${ProfileImg});
+    background-size:contain;
+    background-repeat:no-repeat;
+    height:80px;
+    width:80px;
+    float:left;
+    margin-top:26px;
+    margin-left:16px;
+`
+
+export const ProfileInfo = Styled.div`
+    width:300px;
+    margin-top:40px;
+    float:left;
+    margin-left:41px;
+`
+
+export const ProfileNome = Styled.span`
+    height: 24px;
+    width: 158px;
+    font-family:Poppins;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 24px;
     span{
-        background:url(${ArrowDown});
+        font-size:10px;
+        font-family: Poppins;
+        color: rgba(0, 0, 0, 0.38);
+        position:relative;
+        top:-2.5px;
+    }
+`
+export const ProfileRanking = Styled.div`
+  
+`
+
+export const RankingStars = Styled.div`
+    float:left;
+    span{
         display:block;
-        height: 7px;
-        width: 12px;
-        float:right;
-        margin-top:36px;
-        margin-right:30px;
+        width:10px;
+        height:10px;
+        background:url(${Star});
+        background-size:contain;
+        float:left;
+        margin-left:5px;
+        margin-top:7px;
+    }
+    label{
+        color: rgba(0, 0, 0, 0.6);
+        font-family:Poppins;
+        font-size:12px;
+        margin-left:10px;
     }
 `
 
+export const FinaisSemana = Styled.div`
+    display:block;
+    height: 32px;
+    width: 240px;
+    background: #EEFBFC;
+    border-radius: 16px;
+    margin-top:16px;
+    font-family:Poppins;
+    color: #1B98A7;
+    font-size:14px;
+text-align:center;
+line-height:32px;
+`
 
-export const LastLineQuestion = Styled.div`
-    margin-top:40px;    
-    height: 162px;
+export const RankingRecorrencia = Styled.div`
+
+  span{
+        display:block;
+        width:10px;
+        height:10px;
+        background:url(${Heart});
+        background-size:contain;
+        background-repeat:no-repeat;
+        float:left;
+        margin-left:5px;
+        margin-top:7px;
+        margin-left:25px;
+    }
+    label{
+        color: rgba(0, 0, 0, 0.6);
+        font-family:Poppins;
+        font-size:12px;
+        margin-left:10px;
+    }
+`
+
+export const Valor = Styled.div`
+    float:right;
+    width:70px;
+    margin-top:40px;
+    margin-right:17px;
+    span{
+        display:block;
+        font-size:24px;
+        width:70px;
+        color: #1B98A7;
+        font-family:Poppins;
+    }
+    label{
+        display:block;
+        width:70px;
+        font-size:10px;
+        color: #1B98A7;
+        font-family:Poppins;
+        color: rgba(0, 0, 0, 0.38);
+        margin-top:-2.5px;
+    }
+`
+
+export const TituloSection = Styled.span`
+    display:block;
+    color: #1B98A7;
+    font-size: 20px;
+    margin-top:24px;
+`
+
+export const Linha = Styled.section`
+    width:100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    margin-top:24px;
+`
+
+export const BoxService = Styled.section`
+    width: 638px;
+    height: 186px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+    margin-top: 24px;
 `
 
-export const LastLineQuestionTitle = Styled.span`
-    display:block;
-    font-size:34px;
-    width: 235px;
-    height: 72px;
-    margin-top:45px;
-    margin-left:82px;
-    float:left;
-    color:#1B98A7;
-`
-
-export const LasLineGroup = Styled.div`
-    width:478px;
-    float:right;
-    margin-right:83px;
-    margin-top:54px;
-    border-radius: 4px 4px 4px 4px;    
+export const BoxDog = Styled.section`
+    height: 100px;
+    width: 638px;
+    border-radius: 4px;
+    margin-top:16px;
     border: 1px solid rgba(0, 0, 0, 0.12);
-    height:54px;   
 `
 
-export const LasLineGroupInput = Styled.input`
-    display:block;
+export const BoxDogProfile = Styled.div`
+  background:url(${Tobby});
+    background-size:contain;
+    background-repeat:no-repeat;
+    height:40px;
+    width:40px;
     float:left;
-    border:none;
-    height:54px;
-    text-indent:15px;
-    font-size:16px;
-    width:320px;
-`
-
-export const LasLineTalkUs = Styled.span`
-    display: block;
-    cursor:pointer;
-    float:right;
-    width:152px;
-    text-align:center;
-    height:54px;
-    line-height:54px;
-    background:#1B98A7;
-    color:#fff;
-    font-size:14px;
-    border-radius: 0px 4px 4px 0px;
+    margin-top:30px;
+    margin-left:16px;
 `

@@ -20,14 +20,14 @@ function Inicial() {
 
             <Menu />
             <Content>
-                <Link to={'/cliente/hero/conversar'} style={{ display: 'block', position: 'relative', top: 590, left: 930, height: 40, width: 385, cursor: 'pointer'}}></Link>
+                <div style={{  width: 1000, margin: '0 auto', height: 100, position: 'relative', top: 525 }}>
+                    <Link to={'/cliente/hero/conversar'} style={{ float: 'right', display: 'block', position: 'relative', height: 30, width: 330, cursor: 'pointer' }}></Link>
 
-                <Link to={'/cliente/hero/service'} style={{ display: 'block', position: 'relative', top: 600, left: 930, height: 40, width: 385, cursor: 'pointer' }}></Link>
-                <div style={{position:'absolute', marginTop:'10px', height:'270px', width:'600px',lineHeight:'270px',textAlign:'center',fontSize:22, background:'#fff', border:'1px solid',top:'1775px', left:'220px'}}>Mapa aqui</div>
-  
+                    <Link to={'/cliente/hero/service'} style={{  float: 'right', display: 'block', position: 'absolute', left:'670px', top:'40px',height: 30, width: 330, cursor: 'pointer' }}></Link>
+                </div>
             </Content>
 
-            <Footer/>
+            <Footer />
         </div>
     );
 }

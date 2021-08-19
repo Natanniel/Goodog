@@ -52,8 +52,7 @@ export const Menubox = Styled.ul`
     margin-left:30px;
     padding:0px;
     float:left;
-    width:600px;
-   
+    width:610px;
     li{
         float:left;
         font-size: 16px;
@@ -152,10 +151,10 @@ export const BtnEntrar = Styled.span`
     border-radius: 4px;
     font-size:
     cursor:pointer;
-
     font-family:Poppins;
     &:hover{
         color:#1B98A7;        
         background:#fff;
+        cursor:pointer;
     }
 `

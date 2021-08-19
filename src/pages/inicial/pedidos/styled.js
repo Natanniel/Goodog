@@ -6,10 +6,11 @@ import BG from './asset/p.png';
 
 
 export const Content = Styled.div`
-    height:789px;
-    width: 1016px;
+    height:700px;
+    width: 800px;
     background: url(${BG});
-    background-size: cover;
+    background-repeat:no-repeat;
+    background-size: contain;
     margin: 0 auto;
     margin-top:25px;
 

@@ -25,8 +25,7 @@ export const Modal = Styled.div`
     border-radius: 4px;
     top:120px;
     border:10px solid #fff;
-    background:url(${bg}) 100% 100%;
-    background-repeat: no-repeat;
+    background:#fff;
 `
 
 export const Title = Styled.h2`
@@ -37,6 +36,7 @@ export const Title = Styled.h2`
     width:100%;
     font-size:20px;
     margin-top:20px;
+    font-family:Poppins;
 `
 
 export const BtnFacebook = Styled.span`
@@ -50,6 +50,8 @@ export const BtnFacebook = Styled.span`
     margin-top:16px;
     border-radius: 4px;
     background: #3B5998;
+    font-family:Poppins;
+    cursor:pointer;
 `
 export const BtnGoogle = Styled.span`
     display:block;
@@ -58,15 +60,42 @@ export const BtnGoogle = Styled.span`
     font-size:14px;
     width: 238px;
     margin:0 auto;
-    margin-top:16px;
+    margin-top:8px;
     border-radius: 4px;
     background: #FFFFFF;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
     color: rgba(0, 0, 0, 0.6);
-
-
-
+    font-family:Poppins;
+    cursor:pointer;
 `
+
+export const BtnEntrar = Styled.span`
+    display:block;
+    height: 33px;
+    line-height:33px;
+    width: 328px;
+    border-radius: 4px;
+    background: #1B98A7;
+    font-family:Poppins;
+    font-size:14px;
+    margin:0 auto;
+    color:#fff;
+    margin-top:22px;
+    cursor:pointer;
+`
+
+export const BtnSemConta = Styled.span`
+    display:block;
+    height: 33px;
+    width: 328px;
+    font-family:Poppins;
+    font-size:14px;
+    margin:0 auto;
+    color: #1B98A7;
+    margin-top:17px;
+    cursor:pointer;
+`
+
 
 export const LabelInfo = Styled.label`
     display:block;
@@ -75,24 +104,31 @@ export const LabelInfo = Styled.label`
     letter-spacing: -0.4px;
     margin-top:16px;
     color: rgba(0, 0, 0, 0.87);
+    font-family:Poppins;
 `
 
 export const InputDiv = Styled.div`
     height: 54px;
-    width: 326px;
     margin:0 auto;
     position:relative;
     margin-top:17px;
+    width:326px;
+   
 `
 
 export const Input = Styled.input`
     border: 1px solid rgba(0, 0, 0, 0.12);
-    font-size:16px;
-    height:54px;
-    float:left;
-    width:300px;
-    text-indent:15px;
     border-radius: 3.5px;
+    font-size:16px;
+    height:50px;
+    padding:0px;
+    float:left;
+    width:326px;
+    text-indent:15px;
+    font-family:Poppins;
+    display:block;
+    margin:0 auto;
+    
  
 `
 
@@ -101,10 +137,12 @@ export const CheckboxLabel = Styled.label`
     width: 251px;
     display:block;
     margin-top:17px;
-    line-height:16px;
+    line-height:32px;
     font-size:10px;
     display:block;
     text-align:left;
+    font-family:Poppins;
+    color: rgba(0, 0, 0, 0.6);
     input{
         display:block;
         height: 24px;
@@ -112,6 +150,7 @@ export const CheckboxLabel = Styled.label`
         margin-right:8px;
         margin-left:35px; 
         float:left;
+        background: #1B98A7;
        
     }
 `;
@@ -154,5 +193,5 @@ export const Close = Styled.span`
     top: 16px;
     position: absolute;
     cursor:pointer;
-
 `
+
