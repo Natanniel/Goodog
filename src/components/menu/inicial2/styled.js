@@ -22,10 +22,12 @@ const rotateNormal = keyframes`
 `;
 
 export const NavMenu = Styled.nav`
+    
     height:85px;
     width:100%;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
     @media(max-width: 800px) {
+        display:none;
         position:absolute;
         z-index:999;
         box-shadow:none;
