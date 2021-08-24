@@ -2,6 +2,7 @@ import Styled from 'styled-components';
 import BackgroundRetangle from '../../../assets/img/homeRetangle.png';
 import BackgroundRetangleMobile from '../../../assets/img/homeRetangleMobile.png';
 import ArrowDown from '../../../assets/icons/arrow-down.png';
+import bgretangulo from './retangulo.png';
 
 
 export const Retangle = Styled.div`
@@ -66,20 +67,25 @@ export const SubTitulo = Styled.span`
 
 
 export const BoxRetangle = Styled.div`
-    width: 966px;
-    height: 188px;
+    
+    width: 1002px;
+    height: 219px;
     margin:0 auto;
     left:0px;
     right:0px;
     position:absolute;
     top:441px;
     background:#fff;
+    background:url(${bgretangulo});
+    background-size:cover;
     border-radius:15px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
     @media(max-width: 800px) {
+        background:#fff;
         top:206px;
         width:327px;
         height: 550px;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+  
     }
 `
 
@@ -101,6 +107,20 @@ export const BtnPesquisar = Styled.span`
         margin-top:20px;
         font-family:Poppins;
         cursor:pointer;
+    }
+
+`
+
+export const BtnPesquisarnormal = Styled.span`
+    display:block;
+    width:120px;
+    height:55px;
+    position:relative;
+    left:840px;
+    top:120px;
+    cursor:pointer;
+ @media(max-width: 800px) {
+        display:none
     }
 
 `

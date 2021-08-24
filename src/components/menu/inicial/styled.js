@@ -29,6 +29,7 @@ export const NavMenu = Styled.nav`
         position:absolute;
         z-index:999;
         box-shadow:none;
+        display:none;
     }
 `
 export const MenuContainer = Styled.div`
@@ -176,4 +177,75 @@ export const BtnEntrar = Styled.span`
         background:#fff;
         cursor:pointer;
     }
+`
+
+export const ImgUser = Styled.span`
+    display:block;
+    height:40px;
+    width:40px;
+    border-radius:50px;
+    border:1px solid rgba(0, 0, 0, 0.3);
+    margin-top:-10px;
+    float:right;
+`
+
+export const LabelNomeUsuario = Styled.span`
+    display: block;
+    height: 16px;
+    width:100px;
+    margin-left:10px;
+    color: rgba(0, 0, 0, 0.87);
+    float:right;
+    cursor:pointer;
+    i{
+        animation: ${rotateNormal} 0.5s forwards;
+        float:right;
+        display:block;
+        height: 7px;
+        width: 12px;
+        background: url(${ArrowBottom});
+        margin-top:5px;
+        margin-left:10px;       
+    }
+    &:hover{
+        i{
+            animation: ${rotate} 0.5s forwards;
+        }
+    }
+    div{
+            opacity:0;            
+            ul{
+                display:block;
+                height: 170px;
+                width: 139px;
+                left: -50px;
+                top: 0px;
+                border-radius: 4px;
+                background:#fff;
+                position:relative;
+                box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                z-index:99999;
+                margin-top:49px;
+                margin-left:0px;
+                padding-left:0px;
+                li{
+                    display:block;
+                    width:100%;
+                    margin-left:0px;
+                    text-indent:6px;
+                    height:34px;
+                    line-height:34px;
+                    padding-top:0px;
+                    &:hover{
+                        color: #fff;
+                        background:#1B98A7;
+                    }
+                   
+                }
+            },
+        }
+        &:hover div{
+                opacity:1;
+            }
 `

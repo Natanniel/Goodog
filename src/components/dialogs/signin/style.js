@@ -193,5 +193,6 @@ export const Close = Styled.span`
     top: 16px;
     position: absolute;
     cursor:pointer;
+    font-family:sans-serif
 `
 

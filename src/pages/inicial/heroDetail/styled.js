@@ -4,7 +4,7 @@ import BackgroundRetangle from '../../../assets/img/homeRetangle.png';
 import ArrowDown from '../../../assets/icons/arrow-down.png';
 
 import BG from './asset/p.png';
-import BGMB from '../../app/logadoHeroDetail/asset/p.png';
+import BGMB from '../../app/logadoHero/asset/p.png';
 
 
 export const Content = Styled.div`
@@ -14,6 +14,7 @@ export const Content = Styled.div`
     background-size: contain;
     background-repeat : no-repeat;
     margin: 0 auto;
+    margin-bottom:-300px;
     @media(max-width: 800px) {
         display:none;
     }
@@ -22,8 +23,9 @@ export const Content = Styled.div`
 
 export const ContentMB = Styled.div`
     height:1100px;
+    width:100vw;
     background: url(${BGMB});
-    background-size: contain;
+    background-size: cover;
     background-repeat : no-repeat;
     margin: 0 auto;
     display:none;

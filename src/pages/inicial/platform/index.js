@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 // import { Container } from './styles';
-import Menu from '../../../components/menu/inicial2';
+import Menu from '../../../components/menu/inicial';
 import Footer from '../../../components/footer/inicio';
 import { Retangle, BoxRetangle } from './styled'
 

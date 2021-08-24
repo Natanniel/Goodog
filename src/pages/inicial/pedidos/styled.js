@@ -3,16 +3,37 @@ import BackgroundRetangle from '../../../assets/img/homeRetangle.png';
 import ArrowDown from '../../../assets/icons/arrow-down.png';
 
 import BG from './asset/p.png';
+import BGMB from '../../app/logadoHeroDetailFinish/asset/p.png';
 
 
 export const Content = Styled.div`
-    height:700px;
-    width: 800px;
+    height:1016px;
+    width: 735px;
     background: url(${BG});
     background-repeat:no-repeat;
     background-size: contain;
     margin: 0 auto;
     margin-top:25px;
+    margin-bottom:-400px;
+    @media(max-width: 800px) {
+        display:none
+    }
+`
+
+export const ContentMB = Styled.div`
+display:none;
+@media(max-width: 800px) {
+    display:block;
+    height:812px;
+    width: 375px;
+    background: url(${BGMB});
+    background-repeat:no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    margin-top:25px;
+    margin-bottom:-300px;
+    }
+  
 
 `
 

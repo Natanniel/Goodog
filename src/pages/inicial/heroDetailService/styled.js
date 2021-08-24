@@ -6,14 +6,28 @@ import Tobby from '../../../assets/icons/tobby.png';
 
 import BG from './asset/p.png';
 
+import BGMB from '../../app/logadoHeroDetail/asset/p.png';
 
 export const Content = Styled.div`
-    height:1300px;
-    width: 1016px;
-    background: url(${BG});
+
+    @media(max-width: 800px) {
+        display:none;
+    }
+`
+
+
+
+export const ContentMB = Styled.div`
+    height:1100px;
+    width:100vw;
+    background: url(${BGMB});
     background-size: cover;
+    background-repeat : no-repeat;
     margin: 0 auto;
-    margin-top:8px;
+    display:none;
+    @media(max-width: 800px) {
+    display:block;
+}
 `
 
 export const Titulo = Styled.span`

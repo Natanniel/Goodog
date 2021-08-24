@@ -20,7 +20,7 @@ export const Modal = Styled.div`
     left: 0;
     right: 0;
     text-align: center;
-    top: 0px;
+    top: 10px;
     border-radius: 4px;
     top:120px;
     background:#fff;
@@ -34,6 +34,7 @@ export const Title = Styled.h2`
     width:100%;
     font-size:20px;
     margin-top:20px;
+    font-family:Poppins;
 `
 
 export const BtnFacebook = Styled.span`
@@ -47,6 +48,8 @@ export const BtnFacebook = Styled.span`
     margin-top:16px;
     border-radius: 4px;
     background: #3B5998;
+    font-family:Poppins;
+    cursor:pointer;
 `
 export const BtnGoogle = Styled.span`
     display:block;
@@ -58,9 +61,10 @@ export const BtnGoogle = Styled.span`
     margin-top:16px;
     border-radius: 4px;
     background: #FFFFFF;
+    font-family:Poppins;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
     color: rgba(0, 0, 0, 0.6);
-
+    cursor:pointer;
 
 
 `
@@ -72,6 +76,7 @@ export const LabelInfo = Styled.label`
     letter-spacing: -0.4px;
     margin-top:16px;
     color: rgba(0, 0, 0, 0.87);
+    font-family:PoppinsLight;
 `
 
 export const InputDiv = Styled.div`
@@ -87,21 +92,30 @@ export const Input = Styled.input`
     font-size:16px;
     height:54px;
     float:left;
-    width:300px;
+    width:326px;
     text-indent:15px;
     border-radius: 3.5px;
+    font-family:Poppins;
  
 `
 
 export const CheckboxLabel = Styled.label`
     height: 32px;
-    width: 251px;
+    width: 350px;
     display:block;
-    margin-top:17px;
+    margin-top:13px;
     line-height:16px;
     font-size:10px;
     display:block;
     text-align:left;
+    font-family:Poppins;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 1.5px;
+    label{
+        
+       cursor:pointer;
+        color: #1B98A7;
+    }
     input{
         display:block;
         height: 24px;
@@ -109,8 +123,9 @@ export const CheckboxLabel = Styled.label`
         margin-right:8px;
         margin-left:35px; 
         float:left;
-       
+        
     }
+   
 `;
 
 export const Cadastrar = Styled.span`
@@ -130,6 +145,9 @@ export const Cadastrar = Styled.span`
     padding-bottom:9px;
     color:#fff;
     cursor:pointer;
+    font-family:Poppins;
+    line-height:15px;
+    letter-spacing: 1.25px;
 `
 
 export const JaTenhoConta = Styled.span`
@@ -142,6 +160,7 @@ export const JaTenhoConta = Styled.span`
     font-size:14px;
     margin-top:9px;
     cursor:pointer;
+    font-family:Poppins;
 `
 
 export const Close = Styled.span`
@@ -151,5 +170,5 @@ export const Close = Styled.span`
     top: 21px;
     position: absolute;
     cursor:pointer;
-
+    font-family:sans-serif;
 `

@@ -1,36 +1,71 @@
 import React, { useEffect, useState } from 'react';
+import api from '../../../service/api';
 
 // import { Container } from './styles';
 import { Close, BackgroundModal, Modal, Title, Cadastrar, JaTenhoConta, BtnFacebook, BtnGoogle, LabelInfo, InputDiv, Input, CheckboxLabel } from './style';
 
 function Dialogs({ fechar }) {
 
+    let [email, setEmail] = useState('');
+    let [nome, setNome] = useState('');
+    let [telefone, setTelefone] = useState('');
+    let [senha, setSenha] = useState('');
+    let [checkConcordo, setConcordo] = useState(false)
+
+    let cadastrar = () => {
+        if (email.length > 3)
+            if (nome.length > 10)
+                if (telefone.length >= 9)
+                    if (telefone.length >= 6)
+                        if (checkConcordo) {
+                            let dados = {
+                                email,
+                                nome,
+                                telefone,
+                                senha
+                            }
+
+                            api.post('usuario/criar', dados).then(function () {
+                                alert('Usuario criado com sucesso !');
+                            }).catch(function () {
+                                alert('Usuario já cadastrado em nosso sistema');
+                            })
+                        } else alert('Você precisa concordar com os termos de uso e politicas de privacidade.')
+                    else
+                        alert('sua senha deve conter pelo menos 6 digitos');
+                else
+                    alert('Você precisa informar um telefone válido');
+            else
+                alert('Você precisa informar um seu nome completo');
+        else
+            alert('Você precisa informar um email válido');
+    }
 
     return (
         <BackgroundModal>
             <Modal>
                 <Close onClick={() => fechar()}>X</Close>
                 <Title>Cadastre-se</Title>
-                <BtnFacebook>Entrar com Facebook</BtnFacebook>
-                <BtnGoogle>Entrar com Google</BtnGoogle>
+                <BtnFacebook onClick={() => alert('Integração em revisão.')}>Entrar com Facebook</BtnFacebook>
+                <BtnGoogle onClick={() => alert('Desculpe ! o seu token ainda não foi autorizado.')}>Entrar com Google</BtnGoogle>
                 <div style={{ margin: '0 auto', marginTop: '16px', width: '238px', border: '1px solid rgba(0,0,0,0.12)' }}></div>
                 <LabelInfo>Ou informe os dados abaixo</LabelInfo>
                 <InputDiv>
-                    <Input placeholder="E-mail" />
+                    <Input placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </InputDiv>
                 <InputDiv>
-                    <Input placeholder="Nome completo" />
+                    <Input placeholder="Nome completo" value={nome} onChange={(e) => setNome(e.target.value)} />
                 </InputDiv>
                 <InputDiv>
-                    <Input placeholder="Telefone" />
+                    <Input placeholder="Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
                 </InputDiv>
                 <InputDiv>
-                    <Input placeholder="Senha" type={'password'} />
+                    <Input placeholder="Senha" type={'password'} value={senha} onChange={(e) => setSenha(e.target.value)} />
                 </InputDiv>
 
                 <CheckboxLabel><input type="checkbox" name="checkbox" value="value" />Ser notificado sobre meus pedidos via e-mail e Whatsapp.</CheckboxLabel>
-                <CheckboxLabel style={{ marginBottom: '13px' }}><input type="checkbox" name="checkbox" value="value" />Concordo com os Termos de Uso e Política de Privacidade da Goodog.</CheckboxLabel>
-                <Cadastrar>Cadastrar</Cadastrar>
+                <CheckboxLabel style={{ marginBottom: '13px', marginTop: 4 }}><input type="checkbox" name="checkbox" checked={checkConcordo} onChange={() => setConcordo(!checkConcordo)} />Concordo com os <label onClick={() => alert('Ainda não especificado')}>Termos de Uso</label> e <label onClick={() => alert('Ainda não especificado')}>Política de Privacidade</label> da Goodog.</CheckboxLabel>
+                <Cadastrar onClick={() => cadastrar()}>Cadastrar</Cadastrar>
                 <JaTenhoConta>Ja tenho conta</JaTenhoConta>
             </Modal>
         </BackgroundModal>
