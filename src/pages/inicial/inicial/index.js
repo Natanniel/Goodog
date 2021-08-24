@@ -37,8 +37,9 @@ function Inicial({ navigation }) {
                     <Itens></Itens>
                     <Itens></Itens>
                     <Itens></Itens>
+                    <BtnPesquisar>Pesquisar</BtnPesquisar>
                     <Link to="/cliente" style={{ textDecoration: 'none' }}>
-                        <BtnPesquisar>Pesquisar</BtnPesquisar>
+                       
                         <BtnPesquisarnormal></BtnPesquisarnormal>
                     </Link>
                 </BoxRetangle>
