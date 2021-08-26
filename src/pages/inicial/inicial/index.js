@@ -6,7 +6,7 @@ import Footer from '../../../components/footer/inicio';
 import { Retangle, BoxRetangle } from './styled'
 
 import { Link, useHistory } from "react-router-dom";
-import { BtnPesquisar, Itens,BtnPesquisarnormal, SectionFacaParte, FacaParte, Container, Titulo2, Subtitulo2, SectionCards, Card, IconCard, CardTitle, CardSubtitle, CardButton, Titulo, SubTitulo } from './styled'
+import { BtnPesquisar, Itens, BtnPesquisarnormal, SectionFacaParte, FacaParte, Container, Titulo2, Subtitulo2, SectionCards, Card, IconCard, CardTitle, CardSubtitle, CardButton, Titulo, SubTitulo } from './styled'
 import { BoxQuestion, LastLineQuestion, LastLineQuestionTitle, LasLineGroup, LasLineGroupInput, LasLineTalkUs } from './styled'
 
 import Modal from 'styled-react-modal'
@@ -37,9 +37,9 @@ function Inicial({ navigation }) {
                     <Itens></Itens>
                     <Itens></Itens>
                     <Itens></Itens>
-                    <BtnPesquisar>Pesquisar</BtnPesquisar>
+
                     <Link to="/cliente" style={{ textDecoration: 'none' }}>
-                       
+                        <BtnPesquisar>Pesquisar</BtnPesquisar>
                         <BtnPesquisarnormal></BtnPesquisarnormal>
                     </Link>
                 </BoxRetangle>

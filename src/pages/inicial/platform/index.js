@@ -112,10 +112,10 @@ function Inicial() {
                     </div>
 
                 </LeftDiv>
-                     <RightDiv>
+                <RightDiv>
                     <Map>MAPA</Map>
                 </RightDiv>
-                
+
             </Container>
 
 

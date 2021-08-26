@@ -19,7 +19,6 @@ const routes = () => {
             <Route path="/recuperarsenha" exact component={RecuperaSenha} />
             <Route path="/cliente" exact component={ClientePlatform} />
             <Route path="/cliente/pedidos" exact component={ClientePedido} />
-
             <Route path="/cliente/hero" exact component={ClienteHero} />
             <Route path="/cliente/hero/service" exact component={ClienteHeroService} />
             <Route path="/cliente/hero/submit" exact component={ClienteHeroServiceSubmit} />
