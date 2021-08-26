@@ -2,6 +2,11 @@ import Styled, { keyframes } from 'styled-components';
 import House from '../../../assets/icons/white-house.png';
 import Logotipo from '../../../assets/img/logotipo-blue.png';
 
+import Facebook from '../../../assets/icons/icon-facebook.png';
+import Instagram from '../../../assets/icons/icon-insta.png';
+import Youtube from '../../../assets/icons/icon-youtube.png';
+
+
 export const NavMenuResponsive = Styled.nav`
     display:none;
  
@@ -109,4 +114,55 @@ export const EntrarR = Styled.span`
     text-align:center;
     line-height:36px;
     margin-left:36px;
+`
+
+export const SeparatorFR = Styled.div`
+    margin-top:40px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.38);
+`
+
+export const SeparatorR = Styled.div`
+    margin-top:16px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.38);
+`
+
+export const MenuR = Styled.span`
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top:16px;
+
+`
+
+export const SocialR = Styled.div`
+    margin-top:40px;
+    #facebook{
+        display:block;
+        float:left;
+        height: 20px;
+        width: 20px;
+        background:url(${Facebook});
+        background-size:contain;
+        background-repeat:no-repeat;
+        margin-left:50px;
+    }
+    #instagram{
+        display:block;
+        float:left;
+        height: 20px;
+        width: 20px;
+        background:url(${Instagram});
+        background-size:contain;
+        background-repeat:no-repeat;
+        margin-left:50px;
+    }
+    #youtube{
+        display:block;
+        float:left;
+        height: 20px;
+        width: 20px;
+        background:url(${Youtube});
+        background-size:contain;
+        background-repeat:no-repeat;
+        margin-left:50px;
+    }
 `

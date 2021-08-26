@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 // import { Container } from './styles';
 import { NavMenu, LabelNomeUsuario, ImgUser, MenuContainer, Logo, Menubox, BtnEntrar, MenuBoxRight, CriarConta } from './styled';
-import { CriarContaR, EntrarR, ResponsiveR, NavMenuResponsive, Sidebar, LogoR } from './styledResponsive';
+import { SocialR, CriarContaR, MenuR, SeparatorFR, SeparatorR, EntrarR, ResponsiveR, NavMenuResponsive, Sidebar, LogoR } from './styledResponsive';
 
 import DialogSignup from '../../dialogs/signup'
 import DialogSignin from '../../dialogs/signin'
 import { Link, useHistory } from "react-router-dom";
 import Cookies from 'js-cookie';
 
-
+import Sign from './responsiveSign';
 
 function Menu({ nav }) {
 
@@ -19,6 +19,8 @@ function Menu({ nav }) {
 
     let [inicio, setInicio] = useState(true);
     let [menu, setMenu] = useState(false);
+
+    let [sign, setSign] = useState(false);
 
     useEffect(() => {
         var token = Cookies.get("usuario");
@@ -127,16 +129,47 @@ function Menu({ nav }) {
             {menu ? (
                 <Sidebar>
                     <ResponsiveR>
-                        <LogoR></LogoR>
-                        <div style={{ marginTop: 37 }}>
-                            <CriarContaR>Criar conta</CriarContaR>
-                            <EntrarR>Entrar</EntrarR>
-                        </div>
+
+                        {sign ? <Sign />
+                            : (
+
+                                <div>
+
+                                    <LogoR></LogoR>
+                                    <div style={{ marginTop: 37, height: '36px' }}>
+                                        <CriarContaR>Criar conta</CriarContaR>
+                                        <EntrarR onClick={() => setSign(true)}>Entrar</EntrarR>
+
+                                    </div>
+                                    <SeparatorFR />
+                                    <MenuR>
+                                        Serviço
+                                    </MenuR>
+                                    <SeparatorR />
+                                    <MenuR>
+                                        Como funciona?
+                                    </MenuR>
+                                    <SeparatorR />
+                                    <MenuR>
+                                        Faça parte
+                                    </MenuR>
+                                    <SeparatorR />
+                                    <MenuR>
+                                        Dúvidas
+                                    </MenuR>
+                                    <SocialR>
+                                        <i id='facebook'></i>
+                                        <i id='instagram'></i>
+                                        <i id='youtube'></i>
+                                    </SocialR>
+                                </div>
+                            )}
                     </ResponsiveR>
                 </Sidebar>
-            ) : null}
+            ) : null
+            }
 
-        </div>
+        </div >
     );
 }
 
