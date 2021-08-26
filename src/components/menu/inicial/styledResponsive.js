@@ -1,4 +1,6 @@
 import Styled, { keyframes } from 'styled-components';
+import House from '../../../assets/icons/white-house.png';
+import Logotipo from '../../../assets/img/logotipo-blue.png';
 
 export const NavMenuResponsive = Styled.nav`
     display:none;
@@ -14,8 +16,12 @@ export const NavMenuResponsive = Styled.nav`
         bottom: 0; 
         right: 0;
         margin-bottom: -10px;
+       
     }
     ul{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
         display:inline-block;
         text-align:center;
         li{
@@ -23,11 +29,84 @@ export const NavMenuResponsive = Styled.nav`
             display:inline-block;
             text-align:center;
             width:125px;
-            border:1px solid;
-            margin-left:14px ;
             font-family:Poppins;
             color:#fff;
             font-size:12px;
+            width: 50%;
+            #house{
+                display:inline-flex;
+                background: url(${House});
+                width:20px;
+                height:17px;
+                margin-top:5px;
+            }
+            #menu{
+                display:inline-flex;
+                background: url(${House});
+                width:20px;
+                height:17px;
+                margin-top:5px;
+            }
+            span{
+                display:block;
+                color: rgba(255, 255, 255, 0.50);
+            }
+        }
+        .active{
+            span{color:#fff!important}   
         }
     }
+`
+
+export const Sidebar = Styled.aside`
+    position: absolute;
+    height:100vh;
+    width:100vw;
+    z-index:9999;
+    position:fixed;
+    background: #fff;
+    font-family:Poppins;
+`
+
+export const LogoR = Styled.span`
+    display:block;
+    height: 29px;
+    width: 121px;
+    margin-top:26px;
+    background:url(${Logotipo});
+    
+`
+
+export const ResponsiveR = Styled.div`
+    width:280px;
+    margin:0 auto;
+`
+
+export const CriarContaR = Styled.span`
+    height: 36px;
+    width: 167px;
+    left: 0px;
+    top: 0px;
+    border-radius: 4px;
+    background: #1B98A7;
+    border-radius: 4px;
+    float:left;
+    line-height:36px;
+    color:#fff;
+    font-size:14px;
+    text-align:center;
+`
+
+export const EntrarR = Styled.span`
+    display:block;
+    float:left;
+    height: 36px;
+    width: 49px;
+    left: 21px;
+    top: 10px;
+    font-size:14px;
+    color: rgba(0, 0, 0, 0.6);
+    text-align:center;
+    line-height:36px;
+    margin-left:36px;
 `

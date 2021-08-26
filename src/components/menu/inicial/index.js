@@ -2,18 +2,23 @@ import React, { useEffect, useState } from 'react';
 
 // import { Container } from './styles';
 import { NavMenu, LabelNomeUsuario, ImgUser, MenuContainer, Logo, Menubox, BtnEntrar, MenuBoxRight, CriarConta } from './styled';
-import { NavMenuResponsive } from './styledResponsive';
+import { CriarContaR, EntrarR, ResponsiveR, NavMenuResponsive, Sidebar, LogoR } from './styledResponsive';
 
 import DialogSignup from '../../dialogs/signup'
 import DialogSignin from '../../dialogs/signin'
 import { Link, useHistory } from "react-router-dom";
 import Cookies from 'js-cookie';
 
+
+
 function Menu({ nav }) {
 
     let [visivel, setVisivel] = useState(false);
     let [visivelLogin, setVisivelLogin] = useState(false);
     let [logado, setLogado] = useState(false);
+
+    let [inicio, setInicio] = useState(true);
+    let [menu, setMenu] = useState(false);
 
     useEffect(() => {
         var token = Cookies.get("usuario");
@@ -34,6 +39,15 @@ function Menu({ nav }) {
         window.location.reload();
     }
 
+    let verMenu = () => {
+        setInicio(false);
+        setMenu(true);
+    }
+
+    let verInicio = () => {
+        setInicio(true);
+        setMenu(false);
+    }
 
     return (
         <div>
@@ -96,12 +110,31 @@ function Menu({ nav }) {
 
 
             </NavMenu >
+
             <NavMenuResponsive>
                 <ul>
-                    <li style={{ marginLeft: -14 }}>Inicio</li>
-                    <li style={{ marginLeft: 14 }}>Menu</li>
+                    <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
+                        <i id={'house'}></i>
+                        <span>Inicio</span>
+                    </li>
+                    <li onClick={() => verMenu()} className={menu ? 'active' : ''}>
+                        <i id={'menu'}></i>
+                        <span>Menu</span>
+                    </li>
                 </ul>
             </NavMenuResponsive>
+
+            {menu ? (
+                <Sidebar>
+                    <ResponsiveR>
+                        <LogoR></LogoR>
+                        <div style={{ marginTop: 37 }}>
+                            <CriarContaR>Criar conta</CriarContaR>
+                            <EntrarR>Entrar</EntrarR>
+                        </div>
+                    </ResponsiveR>
+                </Sidebar>
+            ) : null}
 
         </div>
     );
