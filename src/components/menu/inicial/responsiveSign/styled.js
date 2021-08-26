@@ -102,7 +102,7 @@ export const EsqueciSenha = Styled.label`
 `
 export const FooterButtons = Styled.div`
     display: block;
-    position: fixed;
+    position: absolute;
     z-index: 99999;
     height: 56px;
     width: 100vw;

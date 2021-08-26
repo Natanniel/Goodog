@@ -37,6 +37,7 @@ export const MenuContainer = Styled.div`
     margin: 0 auto;
 `
 
+
 export const Logo = Styled.span`
     display:block;
     height: 29px;

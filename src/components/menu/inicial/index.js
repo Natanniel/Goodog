@@ -61,6 +61,7 @@ function Menu({ nav }) {
            */}
                 <MenuContainer>
                     <Link to={'/'} style={{ cursor: 'pointer' }}>
+                        
                         <Logo />
                     </Link>
 
