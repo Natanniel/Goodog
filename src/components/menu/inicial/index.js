@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 // import { Container } from './styles';
 import { NavMenu, LabelNomeUsuario, ImgUser, MenuContainer, Logo, Menubox, BtnEntrar, MenuBoxRight, CriarConta } from './styled';
-import { SocialR, CriarContaR, MenuR, SeparatorFR, SeparatorR, EntrarR, ResponsiveR, NavMenuResponsive, Sidebar, LogoR } from './styledResponsive';
+import { SocialR, CriarContaR, MenuR, SeparatorFR, SeparatorR, EntrarR, ResponsiveR, NavMenuResponsive,NavMenuResponsiveLogado, Sidebar, LogoR, ReturnLogo } from './styledResponsive';
 
 import DialogSignup from '../../dialogs/signup'
 import DialogSignin from '../../dialogs/signin'
@@ -10,6 +10,7 @@ import { Link, useHistory } from "react-router-dom";
 import Cookies from 'js-cookie';
 
 import Sign from './responsiveSign';
+import Signup from './responsiveSignup';
 
 function Menu({ nav }) {
 
@@ -21,6 +22,7 @@ function Menu({ nav }) {
     let [menu, setMenu] = useState(false);
 
     let [sign, setSign] = useState(false);
+    let [signup, setSignup] = useState(false);
 
     useEffect(() => {
         var token = Cookies.get("usuario");
@@ -51,6 +53,11 @@ function Menu({ nav }) {
         setMenu(false);
     }
 
+    let retornarSubmenu = () => {
+        setSign(false);
+        setSignup(false);
+    }
+
     return (
         <div>
             <NavMenu>
@@ -61,12 +68,8 @@ function Menu({ nav }) {
            */}
                 <MenuContainer>
                     <Link to={'/'} style={{ cursor: 'pointer' }}>
-                        
                         <Logo />
                     </Link>
-
-
-
                     <Menubox>
                         <li style={{ width: '80px' }}>Serviço<i></i>
                             <div>
@@ -110,64 +113,94 @@ function Menu({ nav }) {
                 </MenuContainer>
                 {visivel ? <DialogSignup fechar={fecharModalSignup} /> : null}
                 {visivelLogin ? <DialogSignin nav={nav} fechar={fecharModalSignin} /> : null}
-
-
             </NavMenu >
 
-            <NavMenuResponsive>
-                <ul>
-                    <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
-                        <i id={'house'}></i>
-                        <span>Inicio</span>
-                    </li>
-                    <li onClick={() => verMenu()} className={menu ? 'active' : ''}>
-                        <i id={'menu'}></i>
-                        <span>Menu</span>
-                    </li>
-                </ul>
-            </NavMenuResponsive>
 
-            {menu ? (
-                <Sidebar>
-                    <ResponsiveR>
+            {logado ? (
+                <NavMenuResponsiveLogado>
+                    <ul>
+                        <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
+                            <i id={'house'}></i>
+                            <span>Inicio</span>
+                        </li>
+                        <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
+                            <i id={'house'}></i>
+                            <span>Inicio</span>
+                        </li>
+                        <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
+                            <i id={'house'}></i>
+                            <span>Inicio</span>
+                        </li>
+                        <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
+                            <i id={'house'}></i>
+                            <span>Inicio</span>
+                        </li>
 
-                        {sign ? <Sign />
-                            : (
+                        <li onClick={() => verMenu()} className={menu ? 'active' : ''}>
+                            <i id={'menu'}></i>
+                            <span>Menu</span>
+                        </li>
+                    </ul >
+                </NavMenuResponsiveLogado>
+            ) : (
+                <NavMenuResponsive>
 
-                                <div>
+                    <ul>
+                        <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
+                            <i id={'house'}></i>
+                            <span>Inicio</span>
+                        </li>
+                        <li onClick={() => verMenu()} className={menu ? 'active' : ''}>
+                            <i id={'menu'}></i>
+                            <span>Menu</span>
+                        </li>
+                    </ul >
 
-                                    <LogoR></LogoR>
-                                    <div style={{ marginTop: 37, height: '36px' }}>
-                                        <CriarContaR>Criar conta</CriarContaR>
-                                        <EntrarR onClick={() => setSign(true)}>Entrar</EntrarR>
+                </NavMenuResponsive >
+            )}
 
-                                    </div>
-                                    <SeparatorFR />
-                                    <MenuR>
-                                        Serviço
-                                    </MenuR>
-                                    <SeparatorR />
-                                    <MenuR>
-                                        Como funciona?
-                                    </MenuR>
-                                    <SeparatorR />
-                                    <MenuR>
-                                        Faça parte
-                                    </MenuR>
-                                    <SeparatorR />
-                                    <MenuR>
-                                        Dúvidas
-                                    </MenuR>
-                                    <SocialR>
-                                        <i id='facebook'></i>
-                                        <i id='instagram'></i>
-                                        <i id='youtube'></i>
-                                    </SocialR>
-                                </div>
-                            )}
-                    </ResponsiveR>
-                </Sidebar>
-            ) : null
+            {
+                menu ? (
+                    <Sidebar>
+                        <ResponsiveR>
+
+                            {sign ? <Sign retornar={retornarSubmenu} />
+                                :
+                                signup ? <Signup retornar={retornarSubmenu} />
+                                    : (
+                                        <div>
+                                            <LogoR></LogoR>
+                                            <div style={{ marginTop: 37, height: '36px' }}>
+                                                <CriarContaR onClick={() => setSignup(true)}>Criar conta</CriarContaR>
+                                                <EntrarR onClick={() => setSign(true)}>Entrar</EntrarR>
+
+                                            </div>
+                                            <SeparatorFR />
+                                            <MenuR>
+                                                Serviço
+                                            </MenuR>
+                                            <SeparatorR />
+                                            <MenuR>
+                                                Como funciona?
+                                            </MenuR>
+                                            <SeparatorR />
+                                            <MenuR>
+                                                Faça parte
+                                            </MenuR>
+                                            <SeparatorR />
+                                            <MenuR>
+                                                Dúvidas
+                                            </MenuR>
+                                            <SocialR>
+                                                <i id='facebook'></i>
+                                                <i id='instagram'></i>
+                                                <i id='youtube'></i>
+                                            </SocialR>
+                                        </div>
+                                    )}
+                        </ResponsiveR>
+                    </Sidebar >
+                ) : null
             }
 
         </div >

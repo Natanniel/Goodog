@@ -13,6 +13,34 @@ export const Titulo = Styled.span`
     font-family:Poppins;
 `
 
+export const CheckboxLabel = Styled.label`
+    height: 32px;
+    width: 295px;
+    display:block;
+    margin-top:13px;
+    line-height:16px;
+    font-size:10px;
+    display:block;
+    text-align:left;
+    font-family:Poppins;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 1.5px;
+    label{
+        
+       cursor:pointer;
+        color: #1B98A7;
+    }
+    input{
+        display:block;
+        height: 24px;
+        width: 24px;
+        margin-right:8px; 
+        float:left;
+        
+    }
+   
+`;
+
 export const Facebook = Styled.span`
     display:block;
     height: 36px;
@@ -102,19 +130,14 @@ export const EsqueciSenha = Styled.label`
 `
 export const FooterButtons = Styled.div`
     display: block;
-    position: absolute;
     z-index: 99999;
-    height: 56px;
-    width: 100vw;
-    bottom: 0;
-    right: 0;
-    margin-bottom: 100px;
+    margin-top:39px;
 `
 
 export const BtnEntrar = Styled.span`
     display:block;
     height: 33px;
-    width: 328px;
+    width: 168px;
     border-radius: 4px;
     background: #1B98A7;
     border-radius: 4px;
@@ -122,19 +145,18 @@ export const BtnEntrar = Styled.span`
     line-height:33px;
     color:#fff;
     text-align:center;
-    margin:0 auto;
+    float: left;
 `
 
 export const BtnNoHas = Styled.span`
     display:block;
-
-    margin:0 auto;
+    width: 123px;
+    float:left;
     height: 33px;
-    width: 328px;
-    margin-top:8px;
-    border-radius: 4px;
+    margin-left:23px;
     line-height:33px;
     font-size:14px;
     color:#1B98A7;
     text-align:center;
+    float:right;
 `

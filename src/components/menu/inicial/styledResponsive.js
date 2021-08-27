@@ -1,6 +1,8 @@
 import Styled, { keyframes } from 'styled-components';
 import House from '../../../assets/icons/white-house.png';
+import Person from '../../../assets/icons/white-person.png';
 import Logotipo from '../../../assets/img/logotipo-blue.png';
+import ArrowLeft from '../../../assets/icons/arrow-left.png';
 
 import Facebook from '../../../assets/icons/icon-facebook.png';
 import Instagram from '../../../assets/icons/icon-insta.png';
@@ -20,7 +22,6 @@ export const NavMenuResponsive = Styled.nav`
         box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
         bottom: 0; 
         right: 0;
-        margin-bottom: -10px;
        
     }
     ul{
@@ -47,10 +48,11 @@ export const NavMenuResponsive = Styled.nav`
             }
             #menu{
                 display:inline-flex;
-                background: url(${House});
+                background: url(${Person});
+                background-size:100% 100%;
                 width:20px;
                 height:17px;
-                margin-top:5px;
+                margin-top:12px;
             }
             span{
                 display:block;
@@ -63,6 +65,62 @@ export const NavMenuResponsive = Styled.nav`
     }
 `
 
+export const NavMenuResponsiveLogado = Styled.nav`
+    display:none;
+ 
+    @media(max-width: 800px) {
+        display:block;
+        position: fixed;
+        z-index:99999;
+        height: 56px;
+        width: 100vw;
+        background: #1B98A7;
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+        bottom: 0; 
+        right: 0;
+       
+    }
+    ul{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        display:inline-block;
+        text-align:center;
+        li{
+            list-style:none;
+            display:inline-block;
+            text-align:center;
+            font-family:Poppins;
+            color:#fff;
+            font-size:12px;
+            width: 20%;
+            #house{
+                display:inline-flex;
+                background: url(${House});
+                width:20px;
+                height:17px;
+                margin-top:5px;
+            }
+            #menu{
+                display:inline-flex;
+                background: url(${Person});
+                background-size:100% 100%;
+                width:20px;
+                height:17px;
+                margin-top:12px;
+            }
+            span{
+                display:block;
+                color: rgba(255, 255, 255, 0.50);
+            }
+        }
+        .active{
+            span{color:#fff!important}   
+        }
+    }
+`
+
+
 export const Sidebar = Styled.aside`
     position: absolute;
     height:100vh;
@@ -72,6 +130,15 @@ export const Sidebar = Styled.aside`
     background: #fff;
     font-family:Poppins;
 `
+export const ReturnLogo = Styled.span`
+    display:block;
+    height: 12px;
+    width: 7.409999847412109px;
+    border-radius: 0px; 
+    margin-top:10px;
+    background:url(${ArrowLeft});
+    float:left;
+`
 
 export const LogoR = Styled.span`
     display:block;
@@ -79,11 +146,10 @@ export const LogoR = Styled.span`
     width: 121px;
     margin-top:26px;
     background:url(${Logotipo});
-    
 `
 
 export const ResponsiveR = Styled.div`
-    width:280px;
+    width:326px;
     margin:0 auto;
 `
 
@@ -118,12 +184,12 @@ export const EntrarR = Styled.span`
 
 export const SeparatorFR = Styled.div`
     margin-top:40px;
-    border-bottom:1px solid rgba(0, 0, 0, 0.38);
+    border-bottom:1px solid rgba(0, 0, 0, 0.12);
 `
 
 export const SeparatorR = Styled.div`
     margin-top:16px;
-    border-bottom:1px solid rgba(0, 0, 0, 0.38);
+    border-bottom:1px solid rgba(0, 0, 0, 0.12);
 `
 
 export const MenuR = Styled.span`
