@@ -67,7 +67,6 @@ export const SubTitulo = Styled.span`
 
 
 export const BoxRetangle = Styled.div`
-    
     width: 1002px;
     height: 219px;
     margin:0 auto;
@@ -75,9 +74,8 @@ export const BoxRetangle = Styled.div`
     right:0px;
     position:absolute;
     top:441px;
-    background:#fff;
-    background:url(${bgretangulo});
-    background-size:cover;
+    background:#fff; 
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);  
     border-radius:15px;
     @media(max-width: 800px) {
         background:#fff;
@@ -85,7 +83,63 @@ export const BoxRetangle = Styled.div`
         width:327px;
         height: 550px;
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
-  
+    }
+`
+
+export const Cabecalho = Styled.div`
+    display:flex;
+    flex-direction: row;
+    margin-top:16px;
+    margin-left:24px;
+    @media(max-width: 800px) {
+        display:none;
+      }
+    div{
+       padding-bottom:10px;
+       cursor:pointer;
+            span{
+                display:block;
+                text-align: center;
+                font-size:14px;
+                margin-top:9px;
+                font-family:Poppins;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            label{
+                font-size:10px;
+                text-align:center;
+                font-family:PoppinsLight;
+                padding-left:16px;
+                padding-right:16px;
+                padding-top:2px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+    }
+    .selected{
+        box-shadow: inset 0px -2px 0px #1B98A7;
+        span{
+            color:#000!important;
+        }
+    }
+`
+
+export const Filters = Styled.div`
+    display:flex;
+    flex-direction: row;
+    margin-left:25px;
+    margin-top:42px;
+    @media(max-width: 800px) {
+        display:none;
+    }
+    fieldset{
+        float:left;
+        border-radius: 3px;
+        border:1px solid rgba(0, 0, 0, 0.12);
+        legend{
+            color: rgba(0, 0, 0, 0.6);
+            font-size:12px;
+            font-family:Poppins;
+        }
     }
 `
 
@@ -112,30 +166,46 @@ export const BtnPesquisar = Styled.span`
 `
 
 export const BtnPesquisarnormal = Styled.span`
-    display:block;
-    width:120px;
-    height:55px;
-    position:relative;
-    left:840px;
-    top:120px;
-    cursor:pointer;
- @media(max-width: 800px) {
-        display:none
+    a{
+        display:block;
+        width:125px;
+        height:65px;   
+        cursor:pointer;
+        background: #1B98A7;
+        border-radius: 4px;
+        line-height:65px;
+        text-align:center;
+        color:#fff;
+        margin-top:9px;
+        margin-left:9px; 
+        font-family:Poppins;
+        font-size:14px;
+        @media(max-width: 800px) {
+            display:none
+        }
     }
-
 `
 
 export const Itens = Styled.span`
     @media(max-width: 800px) {
         display:block;
         width:290px;
-        height:48px;
+        height:64px;
         border: 1px solid rgba(0, 0, 0, 0.12);
         box-sizing: border-box;
         border-radius: 4px;
         margin:0 auto;
         margin-top:16px;
+        padding-top:14px;
+        padding-left:8px;
     }  
+    span{
+        display:block;
+        height: 20px;
+        width: 240px;
+        line-height:20px;
+        
+    }
 
 `
 

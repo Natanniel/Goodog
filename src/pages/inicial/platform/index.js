@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 // import { Container } from './styles';
 import Menu from '../../../components/menu/inicial';
 import Footer from '../../../components/footer/inicio';
-import { Retangle, BoxRetangle } from './styled'
+import { Retangle, BoxRetangle, Filters, BtnPesquisarnormal } from './styled'
 
 import { Container } from '../../../components/globals'
 import { SearchTopics, SearchTypes, LeftTitleFilterSpan, LeftTitleFilterSpan2, Box, LeftDiv, RankingStars, Valor, FinaisSemana, RankingRecorrencia, ProfileRanking, RightDiv, Profile, ProfileInfo, ProfileNome, LeftTitleFilter, BtnFilter, SelectFilter, Map, Separator, CardUser } from './styled'
@@ -19,6 +19,25 @@ function Inicial() {
 
             <Menu style={{}} />
             <Box>
+                <Filters>
+                    <fieldset style={{ width: 168, height: 55, borderRadius: 3 }}>
+                        <legend>Serviço</legend>
+                    </fieldset>
+                    <fieldset style={{ width: 283, height: 55, borderRadius: 3 }}>
+                        <legend>Seu endereço</legend>
+                    </fieldset>
+                    <fieldset style={{ width: 179, height: 55, borderRadius: 3 }}>
+                        <legend>Entrada</legend>
+                    </fieldset>
+                    <fieldset style={{ width: 179, height: 55, borderRadius: 3 }}>
+                        <legend>Saida</legend>
+                    </fieldset>
+                    <BtnPesquisarnormal>
+                        <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
+                            Encontrar
+                        </Link>
+                    </BtnPesquisarnormal>
+                </Filters>
 
             </Box>
             <Container style={{ minHeight: 700 }}>

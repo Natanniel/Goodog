@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 // import { Container } from './styles';
 import Menu from '../../../components/menu/inicial';
 import Footer from '../../../components/footer/inicio';
-import { Retangle, BoxRetangle } from './styled'
+import { Retangle, BoxRetangle, Cabecalho, Filters } from './styled'
 
 import { Link, useHistory } from "react-router-dom";
 import { BtnPesquisar, Itens, BtnPesquisarnormal, SectionFacaParte, FacaParte, Container, Titulo2, Subtitulo2, SectionCards, Card, IconCard, CardTitle, CardSubtitle, CardButton, Titulo, SubTitulo } from './styled'
@@ -30,7 +30,9 @@ function Inicial({ navigation }) {
                 <SubTitulo>A melhor companhia para seu pet.</SubTitulo>
 
                 <BoxRetangle>
-                    <Itens></Itens>
+                    <Itens>
+                        <span>HOSPEDAGEM</span>
+                    </Itens>
                     <Itens></Itens>
                     <Itens></Itens>
                     <Itens></Itens>
@@ -38,10 +40,43 @@ function Inicial({ navigation }) {
                     <Itens></Itens>
                     <Itens></Itens>
 
-                    <Link to="/cliente" style={{ textDecoration: 'none' }}>
-                        <BtnPesquisar>Pesquisar</BtnPesquisar>
-                        <BtnPesquisarnormal></BtnPesquisarnormal>
-                    </Link>
+
+
+                    <Cabecalho>
+                        <div className="selected">
+                            <span>HOSPEDAGEM</span>
+                            <label>Lugar de conforto para seu pet pernoitar</label>
+                        </div>
+                        <div>
+                            <span>CRECHE</span>
+                            <label>Diversão o dia todo</label>
+                        </div>
+                        <div>
+                            <span>BABÁ</span>
+                            <label>Visitas em sua casa</label>
+                        </div>
+                        <div>
+                            <span>PASSEIO</span>
+                            <label>Para descontrair</label>
+                        </div>
+                    </Cabecalho>
+                    <Filters>
+                        <fieldset style={{ width: 350, height: 55, borderRadius: 3 }}>
+                            <legend>Seu Endereço</legend>
+                        </fieldset>
+                        <fieldset style={{ width: 160, height: 55, borderRadius: 3 }}>
+                            <legend>Quando?</legend>
+                        </fieldset>
+                        <fieldset style={{ width: 200, height: 55, borderRadius: 3 }}>
+                            <legend>Tamanho do animal</legend>
+                        </fieldset>
+                        <BtnPesquisarnormal>
+                            <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
+                                Encontrar
+                            </Link>
+                        </BtnPesquisarnormal>
+                    </Filters>
+                    <BtnPesquisar>Pesquisar</BtnPesquisar>
                 </BoxRetangle>
             </Retangle>
 

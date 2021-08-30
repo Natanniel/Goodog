@@ -11,7 +11,7 @@ import Youtube from '../../../assets/icons/icon-youtube.png';
 
 export const NavMenuResponsive = Styled.nav`
     display:none;
- 
+    
     @media(max-width: 800px) {
         display:block;
         position: fixed;
@@ -22,7 +22,7 @@ export const NavMenuResponsive = Styled.nav`
         box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
         bottom: 0; 
         right: 0;
-       
+        left:0;
     }
     ul{
         width: 100%;
@@ -123,7 +123,7 @@ export const NavMenuResponsiveLogado = Styled.nav`
 
 export const Sidebar = Styled.aside`
     position: absolute;
-    height:100vh;
+    height:100%;
     width:100vw;
     z-index:9999;
     position:fixed;

@@ -22,6 +22,50 @@ export const Box = Styled.div`
     }
 `
 
+export const Filters = Styled.div`
+    display:flex;
+    flex-direction: row;
+    padding-left:22px;
+    padding-top:23px;
+    fieldset{
+        float:left;
+        border-radius: 3px;
+        border:1px solid rgba(0, 0, 0, 0.12);
+        margin:0px;
+        padding:0px;
+        margin-left:5px;
+        height:60px;
+        legend{
+            color: rgba(0, 0, 0, 0.6);
+            font-size:12px;
+            font-family:Poppins;
+            margin-left:10px;
+        }
+    }
+`
+
+export const BtnPesquisarnormal = Styled.span`
+    a{
+        display:block;
+        width:125px;
+        height:50px;   
+        cursor:pointer;
+        background: #1B98A7;
+        border-radius: 4px;
+        line-height:50px;
+        text-align:center;
+        color:#fff;
+        margin-top:9px;
+        margin-left:9px; 
+        font-family:Poppins;
+        font-size:14px;
+        @media(max-width: 800px) {
+            display:none
+        }
+    }
+`
+
+
 export const LeftDiv = Styled.section`
     width: 570px;
     float:left;
@@ -178,7 +222,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 `
 
 export const RightDiv = Styled.section`
-    width: 390px;
+    width: 380px;
     float:right;
     border:1px solid;
     margin-top:25px;
