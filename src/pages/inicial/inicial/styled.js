@@ -81,7 +81,9 @@ export const BoxRetangle = Styled.div`
         background:#fff;
         top:206px;
         width:327px;
-        height: 550px;
+        min-height: 550px;
+        height:auto;
+        padding-bottom:15px;
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
     }
 `
@@ -198,16 +200,48 @@ export const Itens = Styled.span`
         margin-top:16px;
         padding-top:14px;
         padding-left:8px;
+        font-family:Poppins;
     }  
     span{
         display:block;
         height: 20px;
         width: 240px;
-        line-height:20px;
-        
+        line-height:20px;        
+    }
+    label{
+        display:block;
+        height: 16px;
+        width: 240px;
+        line-height:20px; 
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: -0.4px;
+        color: rgba(0, 0, 0, 0.6);   
     }
 
 `
+export const ItensInput = Styled.fieldset`
+    @media(max-width: 800px) {
+        display:block;
+        width:290px;
+        height:64px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin:0 auto;
+        margin-top:16px;
+        padding-top:14px;
+        padding-left:8px;
+        font-family:Poppins;
+    }  
+    legend{
+        color: rgba(0, 0, 0, 0.6);
+        font-size:12px;
+        padding-left:5px; 
+        padding-right:5px;
+    }
+`
+
 
 export const Titulo2 = Styled.h2`
     font-family: Poppins;

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 // import { Container } from './styles';
 import Menu from '../../../components/menu/inicial';
 import Footer from '../../../components/footer/inicio';
-import { Retangle, BoxRetangle, Cabecalho, Filters } from './styled'
+import { Retangle, BoxRetangle, Cabecalho, Filters, ItensInput } from './styled'
 
 import { Link, useHistory } from "react-router-dom";
 import { BtnPesquisar, Itens, BtnPesquisarnormal, SectionFacaParte, FacaParte, Container, Titulo2, Subtitulo2, SectionCards, Card, IconCard, CardTitle, CardSubtitle, CardButton, Titulo, SubTitulo } from './styled'
@@ -32,14 +32,30 @@ function Inicial({ navigation }) {
                 <BoxRetangle>
                     <Itens>
                         <span>HOSPEDAGEM</span>
+                        <label>Lugar de conforto para o seu pet pernoitar</label>
                     </Itens>
-                    <Itens></Itens>
-                    <Itens></Itens>
-                    <Itens></Itens>
-                    <Itens></Itens>
-                    <Itens></Itens>
-                    <Itens></Itens>
+                    <Itens>
+                        <span>CRECHE</span>
+                        <label>Diversão o dia todo</label>
+                    </Itens>
+                    <Itens>
+                        <span>BABÁ</span>
+                        <label>Visitas em sua casa</label>
+                    </Itens>
+                    <Itens>
+                        <span>PASSEIO</span>
+                        <label>Para descontrair</label>
+                    </Itens>
 
+                    <ItensInput>
+                        <legend>Seu endereço</legend>
+                    </ItensInput>
+                    <ItensInput>
+                        <legend>Quando?</legend>
+                    </ItensInput>
+                    <ItensInput>
+                        <legend>Tamanho do animal</legend>
+                    </ItensInput>
 
 
                     <Cabecalho>

@@ -28,6 +28,9 @@ export const Sitemap = Styled.div`
     font-size: 20px;
     color:#fff;
     float:left;
+    @media(max-width: 800px) {
+        display:none;
+    }
 `
 
 export const SitemapBlock = Styled.div`
