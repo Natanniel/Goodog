@@ -92,7 +92,11 @@ function Inicial({ navigation }) {
                             </Link>
                         </BtnPesquisarnormal>
                     </Filters>
-                    <BtnPesquisar>Pesquisar</BtnPesquisar>
+                    <BtnPesquisar>
+                        <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
+                            Pesquisar
+                        </Link>
+                    </BtnPesquisar>
                 </BoxRetangle>
             </Retangle>
 

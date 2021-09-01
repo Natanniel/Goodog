@@ -146,24 +146,27 @@ export const Filters = Styled.div`
 `
 
 export const BtnPesquisar = Styled.span`
-    display:none;
- @media(max-width: 800px) {
-        display:block;
-        height: 57px;
-        width: 290px;
-        left: 0px;
-        top: 0px;
-        border-radius: 4px;
-        background: #1B98A7;
-        border-radius: 4px;
-        color:#fff;
-        line-height:57px;
-        text-align:center;
-        margin:0 auto;
-        margin-top:20px;
-        font-family:Poppins;
-        cursor:pointer;
+    a{
+        display:none;
+        @media(max-width: 800px) {
+                display:block;
+                height: 57px;
+                width: 290px;
+                left: 0px;
+                top: 0px;
+                border-radius: 4px;
+                background: #1B98A7;
+                border-radius: 4px;
+                color:#fff;
+                line-height:57px;
+                text-align:center;
+                margin:0 auto;
+                margin-top:20px;
+                font-family:Poppins;
+                cursor:pointer;
+        }
     }
+
 
 `
 
