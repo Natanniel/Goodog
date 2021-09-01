@@ -1,5 +1,8 @@
 import Styled, { keyframes } from 'styled-components';
 import House from '../../../assets/icons/white-house.png';
+import Pets from '../../../assets/icons/dog-menu.png';
+import Heart from '../../../assets/icons/heart-white.png';
+import Pedidos from '../../../assets/icons/pedidos-white.png';
 import Person from '../../../assets/icons/white-person.png';
 import Logotipo from '../../../assets/img/logotipo-blue.png';
 import ArrowLeft from '../../../assets/icons/arrow-left.png';
@@ -50,8 +53,8 @@ export const NavMenuResponsive = Styled.nav`
                 display:inline-flex;
                 background: url(${Person});
                 background-size:100% 100%;
-                width:20px;
-                height:17px;
+                width:16px;
+                height:16px;
                 margin-top:12px;
             }
             span{
@@ -78,7 +81,7 @@ export const NavMenuResponsiveLogado = Styled.nav`
         box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
         bottom: 0; 
         right: 0;
-       
+       left:0;
     }
     ul{
         width: 100%;
@@ -96,19 +99,41 @@ export const NavMenuResponsiveLogado = Styled.nav`
             width: 20%;
             #house{
                 display:inline-flex;
-                background: url(${House});
+                background: url(${House}) no-repeat;
+                width:20px;
+                height:17px;
+                margin-top:5px;
+            }
+            #pets{
+                display:inline-flex;
+                background: url(${Pets}) no-repeat;
+                width:22px;
+                height:17px;
+                margin-top:5px;
+            }  
+            #favoritos{
+                display:inline-flex;
+                background: url(${Heart}) no-repeat;
+                width:20px;
+                height:17px;
+                margin-top:5px;
+            }
+            #pedidos{
+                display:inline-flex;
+                background: url(${Pedidos}) no-repeat;
                 width:20px;
                 height:17px;
                 margin-top:5px;
             }
             #menu{
                 display:inline-flex;
-                background: url(${Person});
+                background: url(${Person}) no-repeat;
                 background-size:100% 100%;
                 width:20px;
                 height:17px;
                 margin-top:12px;
             }
+            
             span{
                 display:block;
                 color: rgba(255, 255, 255, 0.50);

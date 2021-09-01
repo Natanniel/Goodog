@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 // import { Container } from './styles';
 import { NavMenu, LabelNomeUsuario, ImgUser, MenuContainer, Logo, Menubox, BtnEntrar, MenuBoxRight, CriarConta } from './styled';
-import { SocialR, CriarContaR, MenuR, SeparatorFR, SeparatorR, EntrarR, ResponsiveR, NavMenuResponsive,NavMenuResponsiveLogado, Sidebar, LogoR, ReturnLogo } from './styledResponsive';
+import { SocialR, CriarContaR, MenuR, SeparatorFR, SeparatorR, EntrarR, ResponsiveR, NavMenuResponsive, NavMenuResponsiveLogado, Sidebar, LogoR, ReturnLogo } from './styledResponsive';
 
 import DialogSignup from '../../dialogs/signup'
 import DialogSignin from '../../dialogs/signin'
@@ -20,6 +20,10 @@ function Menu({ nav }) {
 
     let [inicio, setInicio] = useState(true);
     let [menu, setMenu] = useState(false);
+    let [pets, setPets] = useState(false);
+    let [favoritos, setFavoritos] = useState(false);
+    let [pedidos, setPedidos] = useState(false);
+
 
     let [sign, setSign] = useState(false);
     let [signup, setSignup] = useState(false);
@@ -44,13 +48,42 @@ function Menu({ nav }) {
     }
 
     let verMenu = () => {
-        setInicio(false);
         setMenu(true);
+        setInicio(false);
+        setFavoritos(false);
+        setPedidos(false);
+        setPets(false)
     }
 
     let verInicio = () => {
         setInicio(true);
         setMenu(false);
+        setFavoritos(false);
+        setPedidos(false);
+        setPets(false);
+    }
+
+    let verPets = () => {
+        setPets(true);
+        setMenu(false);
+        setInicio(false);
+        setFavoritos(false);
+        setPedidos(false);
+    }
+    let verFavoritos = () => {
+        setMenu(false);
+        setInicio(false);
+        setFavoritos(true);
+        setPedidos(false);        
+        setPets(false);
+    }
+
+    let verPedidos = () => {
+        setMenu(false);
+        setInicio(false);       
+        setPets(false);
+        setFavoritos(false);
+        setPedidos(true);
     }
 
     let retornarSubmenu = () => {
@@ -123,17 +156,17 @@ function Menu({ nav }) {
                             <i id={'house'}></i>
                             <span>Inicio</span>
                         </li>
-                        <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
-                            <i id={'house'}></i>
-                            <span>Inicio</span>
+                        <li onClick={() => verPets()} className={pets ? 'active' : ''}>
+                            <i id={'pets'}></i>
+                            <span>Pets</span>
                         </li>
-                        <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
-                            <i id={'house'}></i>
-                            <span>Inicio</span>
+                        <li onClick={() => verFavoritos()} className={favoritos ? 'active' : ''}>
+                            <i id={'favoritos'}></i>
+                            <span>Favoritos</span>
                         </li>
-                        <li onClick={() => verInicio()} className={inicio ? 'active' : ''}>
-                            <i id={'house'}></i>
-                            <span>Inicio</span>
+                        <li onClick={() => verPedidos()} className={pedidos ? 'active' : ''}>
+                            <i id={'pedidos'}></i>
+                            <span>Pedidos</span>
                         </li>
 
                         <li onClick={() => verMenu()} className={menu ? 'active' : ''}>
@@ -192,7 +225,7 @@ function Menu({ nav }) {
                                                 Dúvidas
                                             </MenuR>
                                             <SocialR>
-                                                <i id='facebook'></i>
+                                                <i id='facebook' style={{ marginLeft: '90px' }}></i>
                                                 <i id='instagram'></i>
                                                 <i id='youtube'></i>
                                             </SocialR>

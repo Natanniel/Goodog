@@ -189,6 +189,7 @@ export const BtnPesquisarnormal = Styled.span`
 `
 
 export const Itens = Styled.span`
+    display:none;
     @media(max-width: 800px) {
         display:block;
         width:290px;
@@ -221,6 +222,7 @@ export const Itens = Styled.span`
 
 `
 export const ItensInput = Styled.fieldset`
+display:none;
     @media(max-width: 800px) {
         display:block;
         width:290px;
@@ -255,7 +257,7 @@ export const Titulo2 = Styled.h2`
     @media(max-width: 800px) {
         width:290px;
         line-height:36px;
-        margin-top:500px
+        margin-top:620px;
     }
 
 `

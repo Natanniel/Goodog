@@ -15,13 +15,35 @@ function Inicial({ retornar }) {
   let [senha, setSenha] = useState('');
   let [checkConcordo, setConcordo] = useState(false);
 
-  let login = () => {
-    api.post('usuario/login', { email, senha }).then(function (e) {
-      Cookies.set('usuario', e.data.id);
-      window.location.reload();
-    }).catch(function () {
-      alert('Usuario ou senha inválidos');
-    })
+
+  let cadastrar = () => {
+    if (email.length > 3)
+      if (nome.length > 10)
+        if (telefone.length >= 9)
+          if (telefone.length >= 6)
+            if (checkConcordo) {
+              let dados = {
+                email,
+                nome,
+                telefone,
+                senha
+              }
+
+              api.post('usuario/criar', dados).then(function () {
+                alert('Usuario criado com sucesso !');
+                retornar();
+              }).catch(function () {
+                alert('Usuario já cadastrado em nosso sistema');
+              })
+            } else alert('Você precisa concordar com os termos de uso e politicas de privacidade.')
+          else
+            alert('sua senha deve conter pelo menos 6 digitos');
+        else
+          alert('Você precisa informar um telefone válido');
+      else
+        alert('Você precisa informar um seu nome completo');
+    else
+      alert('Você precisa informar um email válido');
   }
 
 
@@ -44,12 +66,12 @@ function Inicial({ retornar }) {
           <CheckboxLabel style={{ marginBottom: '13px', marginTop: 4 }}><input type="checkbox" name="checkbox" checked={checkConcordo} onChange={() => setConcordo(!checkConcordo)} />Concordo com os <label onClick={() => alert('Ainda não especificado')}>Termos de Uso</label> e <label onClick={() => alert('Ainda não especificado')}>Política de Privacidade</label> da Goodog.</CheckboxLabel>
 
         </div>
-      
+
 
         <FooterButtons>
-          <BtnEntrar onClick={() => login()}>Entrar</BtnEntrar>
-          <BtnNoHas>Já tenho ainda</BtnNoHas>
-          
+          <BtnEntrar onClick={() => cadastrar()}>Cadastrar</BtnEntrar>
+          <BtnNoHas>Já tenho conta</BtnNoHas>
+
         </FooterButtons>
 
       </div>

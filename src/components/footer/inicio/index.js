@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Footer, Sitemap, SitemapBlock, IconApple, IconGoogle, Face, Youtube, Insta } from './style';
+import { Footer, Sitemap,FooterText, SitemapMob, SitemapMobMenu, SitemapBlock, IconApple, IconGoogle, Face, Youtube, Insta } from './style';
 import { Container } from '../../globals';
 
 function footer() {
@@ -56,6 +56,43 @@ function footer() {
             </ul>
           </SitemapBlock>
         </Sitemap>
+
+        <SitemapMob>
+          <ul style={{ height: 50 }}>
+            <li><IconGoogle /></li>
+            <li><IconApple /></li>
+          </ul>
+
+          <div style={{ marginTop: '42.5px', borderBottom: '1px solid', borderColor: '#fff' }}></div>
+          <SitemapMobMenu>
+            <ul>
+              <li>
+                A Goodog
+                <span></span>
+              </li>
+              <li>
+                Serviço
+                <span></span>
+              </li>
+              <li>
+                Contato
+                <span></span>
+              </li>
+            </ul>
+        
+          </SitemapMobMenu>
+          <SitemapBlock >
+             
+              <ul>
+                <li>
+                  <Face />
+                  <Insta />
+                  <Youtube />
+                </li>
+              </ul>
+            </SitemapBlock>
+        </SitemapMob>
+        <FooterText></FooterText>
       </Container>
     </Footer >
   );
