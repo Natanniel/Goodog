@@ -142,6 +142,27 @@ export const Filters = Styled.div`
             font-size:12px;
             font-family:Poppins;
         }
+        input{
+            display:block;
+            border:none;
+            width: 100%;
+            height:35px;
+            font-size:16px;
+            font-family:Poppins;
+            text-indent:5px;
+        }
+        select{
+            display:block;
+            border:none;
+            width: 100%;
+            height:35px;
+            font-size:16px;
+            font-family:Poppins;
+            text-indent:5px;
+        }
+        input:focus, select:focus {
+            outline-width: 0;
+        }
     }
 `
 
@@ -225,7 +246,7 @@ export const Itens = Styled.span`
 
 `
 export const ItensInput = Styled.fieldset`
-display:none;
+    display:none;
     @media(max-width: 800px) {
         display:block;
         width:290px;
@@ -245,6 +266,7 @@ display:none;
         padding-left:5px; 
         padding-right:5px;
     }
+   
 `
 
 

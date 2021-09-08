@@ -19,6 +19,7 @@ import VectorIndexDog from '../../../assets/img/retangleIndexDog.png';
 
 function Inicial({ navigation }) {
 
+    let [selected, setSelected] = useState("hospedagem")
 
 
     return (
@@ -49,6 +50,7 @@ function Inicial({ navigation }) {
 
                     <ItensInput>
                         <legend>Seu endereço</legend>
+                        
                     </ItensInput>
                     <ItensInput>
                         <legend>Quando?</legend>
@@ -59,19 +61,19 @@ function Inicial({ navigation }) {
 
 
                     <Cabecalho>
-                        <div className="selected">
+                        <div className={selected == "hospedagem" ? 'selected' : null} onClick={() => setSelected("hospedagem")}>
                             <span>HOSPEDAGEM</span>
                             <label>Lugar de conforto para seu pet pernoitar</label>
                         </div>
-                        <div>
+                        <div className={selected == "creche" ? 'selected' : null} onClick={() => setSelected("creche")}>
                             <span>CRECHE</span>
                             <label>Diversão o dia todo</label>
                         </div>
-                        <div>
+                        <div className={selected == "baba" ? 'selected' : null} onClick={() => setSelected("baba")}>
                             <span>BABÁ</span>
                             <label>Visitas em sua casa</label>
                         </div>
-                        <div>
+                        <div className={selected == "passeio" ? 'selected' : null} onClick={() => setSelected("passeio")}>
                             <span>PASSEIO</span>
                             <label>Para descontrair</label>
                         </div>
@@ -79,12 +81,17 @@ function Inicial({ navigation }) {
                     <Filters>
                         <fieldset style={{ width: 350, height: 55, borderRadius: 3 }}>
                             <legend>Seu Endereço</legend>
+                            <input type="search" placeholder="Seu endereço"></input>
                         </fieldset>
                         <fieldset style={{ width: 160, height: 55, borderRadius: 3 }}>
                             <legend>Quando?</legend>
+                            <input type="date" placeholder="Quando ?"></input>
                         </fieldset>
                         <fieldset style={{ width: 200, height: 55, borderRadius: 3 }}>
                             <legend>Tamanho do animal</legend>
+                            <select>
+                                <option>Teste parametro</option>
+                            </select>
                         </fieldset>
                         <BtnPesquisarnormal>
                             <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
@@ -161,7 +168,7 @@ function Inicial({ navigation }) {
                         <span></span>
                     </BoxQuestion>
                     <BoxQuestion>
-                        <article>Que tipo de animais são ermitidos? </article>
+                        <article>Que tipo de animais são emitidos? </article>
                         <span></span>
                     </BoxQuestion>
                     <BoxQuestion>

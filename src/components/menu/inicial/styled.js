@@ -68,16 +68,21 @@ export const Menubox = Styled.ul`
     }
   
     li{
+        padding: 0px 10px;
+        border-radius: 4px;
+        height: 36px;
+        line-height:36px;
+        cursor: pointer;
         float:left;
         font-size: 16px;
         list-style:none;
         color: rgba(0, 0, 0, 0.6);
-        margin-left:38px;
-        padding-top:7px;
+        margin-left:18px;
         cursor:pointer;
         font-family:Poppins;
         &:hover{
-            color: #ED4357;
+            color: #fff;
+            background:#1B98A7;
             i{
                 animation: ${rotate} 0.5s forwards;
             }
@@ -90,7 +95,7 @@ export const Menubox = Styled.ul`
             height: 7px;
             width: 12px;
             background: url(${ArrowBottom});
-            margin-top:8px
+            margin-top:14px
         }
         div{
             opacity:0;            
@@ -117,9 +122,11 @@ export const Menubox = Styled.ul`
                     height:34px;
                     line-height:34px;
                     padding-top:0px;
+                    padding:0px;
                     &:hover{
                         color: #fff;
                         background:#1B98A7;
+                        border-radius:0px;
                     }
                    
                 }
