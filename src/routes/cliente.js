@@ -12,6 +12,8 @@ import ClienteHeroServiceSubmit from '../pages/inicial/heroDetailSubmit'
 import ClienteHeroConversar from '../pages/inicial/conversar'
 import ClientePedido from '../pages/inicial/pedidos'
 
+import GuardiaoCadastro from '../pages/guardiao/cadastro'
+
 const routes = () => {
     return (
         <div>
@@ -23,6 +25,10 @@ const routes = () => {
             <Route path="/cliente/hero/service" exact component={ClienteHeroService} />
             <Route path="/cliente/hero/submit" exact component={ClienteHeroServiceSubmit} />
             <Route path="/cliente/hero/conversar" exact component={ClienteHeroConversar} />
+
+            <Route path="/guardiao/cadastro" exact component={GuardiaoCadastro} />
+
+
         </div>
     );
 }

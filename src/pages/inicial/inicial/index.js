@@ -50,7 +50,7 @@ function Inicial({ navigation }) {
 
                     <ItensInput>
                         <legend>Seu endereço</legend>
-                        
+
                     </ItensInput>
                     <ItensInput>
                         <legend>Quando?</legend>
@@ -150,8 +150,9 @@ function Inicial({ navigation }) {
                         <div >
                             <span> Ofereça seus serviços e ganhe dando amor aos pets que precisam de você!</span>
                         </div>
-                        <span id={'btnCadastrar'} >Cadastrar Agora</span>
-
+                        <Link to="guardiao/cadastro" style={{textDecoration:'none'}}>
+                            <span id={'btnCadastrar'} >Cadastrar Agora</span>
+                        </Link>
                     </FacaParte>
                 </Container>
             </SectionFacaParte>

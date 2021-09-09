@@ -25,6 +25,8 @@ const routes = () => {
             <Route path="/app/logado/hero/detail" exact component={LogadoHeroDetail} />
             <Route path="/app/logado/hero/detailfinish" exact component={LogadoHeroDetailFinish} />
 
+
+
         </div>
     );
 }
