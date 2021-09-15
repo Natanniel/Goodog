@@ -1,5 +1,9 @@
 import Styled from 'styled-components';
 
+export const Divider = Styled.hr`
+    border: 0.5px solid rgba(0, 0, 0, 0.12);
+    margin-top:25px;
+`
 
 export const Titulo = Styled.span`
     font-size:34px;
@@ -58,6 +62,17 @@ export const Row = Styled.div`
             line-height: 16px;
             letter-spacing: 0.4px;
             color: rgba(0, 0, 0, 0.6);
+        }
+        input,select{
+            display:block;
+            height:100%;
+            width:100%;
+            font-size:16px;
+            font-family:Poppins;
+            border:none
+        }
+        input:focus, select:focus {
+            outline-width: 0;
         }
     }
 `
