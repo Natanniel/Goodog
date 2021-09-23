@@ -146,11 +146,11 @@ function Inicial({ navigation }) {
                 <Container>
                     <img src={VectorIndexDog} />
                     <FacaParte style={{}}>
-                        <h2 >Faça parte</h2>
+                        <h2>Faça parte</h2>
                         <div >
                             <span> Ofereça seus serviços e ganhe dando amor aos pets que precisam de você!</span>
                         </div>
-                        <Link to="guardiao/cadastro" style={{textDecoration:'none'}}>
+                        <Link to="guardiao/cadastro" style={{ textDecoration: 'none' }}>
                             <span id={'btnCadastrar'} >Cadastrar Agora</span>
                         </Link>
                     </FacaParte>

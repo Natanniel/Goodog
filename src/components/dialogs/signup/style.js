@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 
 export const BackgroundModal = Styled.div`
-    height:100vh;
+    min-height:100vmax;
     width:100%;
     position:absolute;
     z-index:999;
@@ -12,7 +12,7 @@ export const BackgroundModal = Styled.div`
 `
 
 export const Modal = Styled.div`
-    height: 621px;
+    height: 750px;
     width: 398px;
     position:absolute;
     margin-left: auto;

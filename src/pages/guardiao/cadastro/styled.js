@@ -160,7 +160,126 @@ export const ServiceBox = Styled.div`
         float:right;
         margin-top:22px;
         height: 24px;
-    width: 24px;
-    background: #1B98A7;
+        width: 24px;
+        background: #1B98A7;
+    }
+    input:checked{
+        background-color: #1B98A7;
+    }
+`
+export const Experiencia = Styled.div`
+    display:flex;
+    width:190px;
+    font-family:Poppins;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    height:54px;
+    div{
+        flex:1;
+    }
+    div:nth-child(1){
+        text-align:left;
+        color:red;
+        cursor:pointer;
+        padding-left:12px;
+        padding-right:12px;
+        padding-top:16px;
+    }
+    div:nth-child(2){
+        flex:1;
+        input{
+            text-align:center;
+            display:block;
+            height:50px;
+            padding:0px;
+        }
+    }
+
+    div:nth-child(3){
+        text-align:right;
+        color:#1B98A7;
+        cursor:pointer;
+        padding-right:12px;
+        padding-left:12px;
+        padding-top:16px;
+    }
+`
+
+export const ValueBox = Styled.div`
+    min-height: 151px;
+    width: 530px;
+    left: 0px;
+    top: 0px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);  
+    box-sizing: border-box;
+    border-radius: 4px;
+    .adicionais{
+        display:block;
+        color: #1B98A7;
+        font-family:Poppins;
+        font-size:14px;
+        text-align:center;
+        margin:0 auto;
+        margin-top:50px;
+        clear:both;
+        cursor:pointer;
+        width: 124px;
+        height: 36px;
+        line-height:36px;
+
+    }
+    .title{
+        display:block;
+        font-size:24px;
+        font-family: Poppins;
+        letter-spacing: 0.18px;
+        color: rgba(0, 0, 0, 0.87);
+        margin-top:29px;
+        margin-left:16px;
+        padding:0px; 
+    }
+    .descricao{
+        display:block;
+        width: 400px;
+        color: rgba(0, 0, 0, 0.6);
+        letter-spacing: 0.25px;
+        margin-left:16px;
+        font-size: 14px;
+        font-family: PoppinsLight;
+    }
+    .infos{
+        width:350px; 
+        float:left;
+    }
+    .values{
+        float:right;
+        width:170px;
+        label{
+
+            font-size:20px;
+            font-family:Poppins;
+            position:absolute;
+            margin-top:26px;
+            margin-left:20px;
+        }
+        input{
+            border: 1px solid rgba(0, 0, 0, 0.12);  
+            display:block;
+            float:right;
+            height: 54px;
+            width: 143px;
+            border-radius: 3px;
+            margin-top:13px;
+            margin-right:25px;
+            text-indent:50px;
+            font-size:16px;
+            font-family:Poppins;
+        }
+        span{
+            font-family:Poppins;
+            font-size:12px;
+            color: rgba(0, 0, 0, 0.6);
+            position:relative;
+        }
     }
 `

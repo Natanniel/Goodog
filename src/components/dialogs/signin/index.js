@@ -20,6 +20,11 @@ function Dialogs({ fechar, nav }) {
         })
     }
 
+    let naoTenhoConta = () => {
+        fechar();
+        document.getElementById('criarconta').click();
+    }
+
     return (
         <BackgroundModal>
             <Modal>
@@ -50,7 +55,7 @@ function Dialogs({ fechar, nav }) {
 
                 <BtnEntrar onClick={() => login()}>Entrar</BtnEntrar>
                 <Link to="/cliente" style={{ textDecoration: 'none' }}></Link>
-                <BtnSemConta>Não tenho conta ainda</BtnSemConta>
+                <BtnSemConta onClick={() => naoTenhoConta()}>Não tenho conta ainda</BtnSemConta>
             </Modal>
         </BackgroundModal >
     )

@@ -138,7 +138,7 @@ function Menu({ nav }) {
                             </div>
                         ) : (
                             <div>
-                                <CriarConta onClick={() => setVisivel(true)}>Criar conta</CriarConta>
+                                <CriarConta id='criarconta' onClick={() => setVisivel(true)}>Criar conta</CriarConta>
                                 <BtnEntrar onClick={() => setVisivelLogin(true)}>Entrar</BtnEntrar>
                             </div>
                         )}

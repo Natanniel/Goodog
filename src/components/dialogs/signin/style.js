@@ -2,7 +2,7 @@ import Styled from 'styled-components';
 import bg from './asset/p.png';
 
 export const BackgroundModal = Styled.div`
-    height:100vh;
+    height:100vmax;
     width:100%;
     position:absolute;
     z-index:999;
