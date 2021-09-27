@@ -11,8 +11,19 @@ export const BackgroundModal = Styled.div`
     right:0px;
 `
 
+export const LabelPassword = Styled.label`
+    clear:both;
+    font-size:10px;
+    font-family: Poppins;
+    display: block;
+    margin-left:35px; 
+    width: 365px;
+    text-align:left;
+    
+`;
+
 export const Modal = Styled.div`
-    height: 750px;
+    height: 885px;
     width: 398px;
     position:absolute;
     margin-left: auto;
@@ -80,11 +91,34 @@ export const LabelInfo = Styled.label`
 `
 
 export const InputDiv = Styled.div`
-    height: 54px;
+    min-height: 54px;
     width: 326px;
     margin:0 auto;
     position:relative;
     margin-top:17px;
+    input{
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        font-size:16px;
+        height:54px;
+        float:left;
+        width:326px;
+        text-indent:15px;
+        border-radius: 3.5px;
+        font-family:Poppins;
+        &:focus{
+            outline-width: 0!important;
+        }
+    }
+`
+
+export const LabelErro = Styled.label`
+    color:red;
+    font-family:Poppins;
+    font-size:10px;
+    display:block;
+    padding-top:5px;
+    clear:both;
+    margin-bottom:-5px;
 `
 
 export const Input = Styled.input`
@@ -96,7 +130,9 @@ export const Input = Styled.input`
     text-indent:15px;
     border-radius: 3.5px;
     font-family:Poppins;
- 
+    &:focus{
+        outline-width: 0!important;
+    }
 `
 
 export const CheckboxLabel = Styled.label`

@@ -42,8 +42,7 @@ function CadastroGuardiao() {
                 <Step>
                     <span style={{ width: (25 * etapa) + '%' }}></span>
                 </Step>
-
-
+                
                 <section>
                     {etapa == 1 ?
                         <Dados aprovado={dadosAprovado} voltar={voltarDados} />

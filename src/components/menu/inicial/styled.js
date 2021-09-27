@@ -98,7 +98,7 @@ export const Menubox = Styled.ul`
             margin-top:14px
         }
         div{
-            opacity:0;            
+            display:none;        
             ul{
                 display:block;
                 height: 136px;
@@ -133,7 +133,7 @@ export const Menubox = Styled.ul`
             },
         }
         &:hover div{
-                opacity:1;
+                display:block;
             }
         
     }
