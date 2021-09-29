@@ -3,7 +3,7 @@ import api from '../../../service/api';
 import PasswordStrengthBar from 'react-password-strength-bar';
 import InputMask from "react-input-mask";
 import { Close, BackgroundModal, LabelErro, Modal, Title, Cadastrar, JaTenhoConta, BtnFacebook, BtnGoogle, LabelInfo, InputDiv, Input, CheckboxLabel, LabelPassword } from './style';
-
+import toastr from 'toastr'
 function Dialogs({ fechar }) {
 
     let [email, setEmail] = useState('');
@@ -33,11 +33,11 @@ function Dialogs({ fechar }) {
         .has().not().spaces();                          // Should not have spaces
 
     let cadastrar = () => {
-        if (emailInvalid == false || email.length < 5)
-            if (nomeInvalid == false || nome.length < 2)
+        if (emailInvalid == false && email.length > 5)
+            if (nomeInvalid == false && nome.length > 2)
                 if (sobrenome.length > 2)
-                    if (telefone.length >= 9)
-                        if (senha.length >= 6)
+                    if (telefone.length >= 14)
+                        if (senha.length >= 6 && passMinimum && passUppercase && passLowerCase && passNumber && passEspecial)
                             if (senha == confirmaSenha)
                                 if (checkConcordo) {
                                     let dados = {
@@ -48,23 +48,23 @@ function Dialogs({ fechar }) {
                                     }
 
                                     api.post('usuario/criar', dados).then(function () {
-                                        alert('Usuario criado com sucesso !');
+                                        toastr.error('Usuario criado com sucesso !');
                                     }).catch(function () {
-                                        alert('Usuario já cadastrado em nosso sistema');
+                                        toastr.error('Usuario já cadastrado em nosso sistema');
                                     })
-                                } else alert('Você precisa concordar com os termos de uso e politicas de privacidade.')
+                                } else toastr.error('Você precisa concordar com os termos de uso e politicas de privacidade.')
                             else
-                                alert('Sua senha e confirmação de senha devem ser iguais')
+                                toastr.error('Sua senha e confirmação de senha devem ser iguais')
                         else
-                            alert('Sua senha deve conter pelo menos 6 digitos');
+                            toastr.error('A senha informada não obedece os critérios de segurança');
                     else
-                        alert('Você precisa informar um telefone válido');
+                        toastr.error('Você precisa informar um telefone válido');
                 else
-                    alert('Você precisa informar seu sobrenome');
+                    toastr.error('Você precisa informar seu sobrenome');
             else
-                alert('Você precisa informar seu nome');
+                toastr.error('Você precisa informar seu nome');
         else
-            alert('Você precisa informar um email válido');
+            toastr.error('Você precisa informar um email válido');
     }
 
     let changeEmail = (e) => {
@@ -156,7 +156,7 @@ function Dialogs({ fechar }) {
                     <Input placeholder="Senha" type={'password'} value={senha} onChange={(e) => changePassword(e.target.value)} />
                 </InputDiv>
                 <InputDiv>
-                    <Input placeholder="Confirmar senha" type={'password'} value={senha} onChange={(e) => setSenha(e.target.value)} />
+                    <Input placeholder="Confirmar senha" type={'password'} value={confirmaSenha} onChange={(e) => setConfirmaSenha(e.target.value)} />
                 </InputDiv>
                 <div style={{ fontFamily: 'Poppins' }}>
                     <LabelPassword style={{ fontFamily: 'PoppinsBold', marginTop: 10 }}>Sua senha deve conter :

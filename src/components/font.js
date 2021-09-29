@@ -10,6 +10,10 @@ import PoppinsLight from '../assets/font/poppins/Poppins-Light.ttf';
 
 
 export const GlobalStyle = createGlobalStyle`  
+  .toast{
+    font-family:poppins!important
+  }
+
    @font-face {
      font-family: 'Inter';
      src: url(${InterRegular});

@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 
 import { Link, useHistory } from "react-router-dom";
 import api from '../../../service/api';
-// import { Container } from './styles';
 import { Close, BackgroundModal, Modal, Title, BtnSemConta, Cadastrar, BtnEntrar, JaTenhoConta, BtnFacebook, BtnGoogle, LabelInfo, InputDiv, Input, CheckboxLabel } from './style';
+import toastr from 'toastr';
 
 function Dialogs({ fechar, nav }) {
 
@@ -16,7 +16,7 @@ function Dialogs({ fechar, nav }) {
             Cookies.set('usuario', e.data.id);
             window.location.reload();
         }).catch(function () {
-            alert('Usuario ou senha inválidos');
+            toastr.error('Usuario ou senha inválidos');
         })
     }
 
