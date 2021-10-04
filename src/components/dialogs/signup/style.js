@@ -1,4 +1,9 @@
 import Styled from 'styled-components';
+import email from '../../../assets/icons/icon_email.png';
+import person from '../../../assets/icons/icon_person.png';
+import contact from '../../../assets/icons/icon-contact.png';
+import password from '../../../assets/icons/icon_password.png';
+
 
 export const BackgroundModal = Styled.div`
     min-height:100vmax;
@@ -108,6 +113,26 @@ export const InputDiv = Styled.div`
         &:focus{
             outline-width: 0!important;
         }
+    }
+    i{
+        width:24px;
+        height:25px;
+        display:block;
+        position:absolute;
+        top:16px;
+        margin-left:300px;
+    }
+    .email{
+        background: url(${email});
+    }
+    .person{
+        background: url(${person});
+    }
+    .contact{
+        background: url(${contact});
+    }
+    .password{
+        background: url(${password});
     }
 `
 

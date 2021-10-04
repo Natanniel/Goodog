@@ -140,22 +140,28 @@ function Dialogs({ fechar }) {
                 <LabelInfo>Ou informe os dados abaixo</LabelInfo>
 
                 <InputDiv>
+                    <i className='email' />
                     <Input placeholder="E-mail" style={{ border: emailInvalid ? '1px solid red' : '1px solid rgba(0,0,0,0.12)' }} value={email} onChange={(e) => changeEmail(e.target.value)} />
                     {emailInvalid ? <LabelErro>Você precisa informar um e-mail válido</LabelErro> : null}
                 </InputDiv>
                 <InputDiv>
+                    <i className='person' />
                     <Input placeholder="Nome" value={nome} onChange={(e) => changeNome(e.target.value)} />
                 </InputDiv>
                 <InputDiv>
+                    <i className='person' />
                     <Input placeholder="Sobrenome" value={sobrenome} onChange={(e) => changeSobrenome(e.target.value)} />
                 </InputDiv>
                 <InputDiv>
+                    <i className='contact' />
                     <InputMask mask="(99) 99999-9999" placeholder="Celular" style={{ textIndent: 10 }} value={telefone} onChange={(e) => setTelefone(e.target.value)} />
                 </InputDiv>
                 <InputDiv>
+                    <i className='password' />
                     <Input placeholder="Senha" type={'password'} value={senha} onChange={(e) => changePassword(e.target.value)} />
                 </InputDiv>
                 <InputDiv>
+                    <i className='password' />
                     <Input placeholder="Confirmar senha" type={'password'} value={confirmaSenha} onChange={(e) => setConfirmaSenha(e.target.value)} />
                 </InputDiv>
                 <div style={{ fontFamily: 'Poppins' }}>

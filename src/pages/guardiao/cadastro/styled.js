@@ -1,4 +1,5 @@
 import Styled from 'styled-components';
+import ArrowDown from '../../../assets/icons/arrow-down-blue.png';
 
 export const Divider = Styled.hr`
     border: 0.5px solid rgba(0, 0, 0, 0.12);
@@ -214,6 +215,7 @@ export const ValueBox = Styled.div`
     box-sizing: border-box;
     border-radius: 4px;
     .adicionais{
+        clear:both;
         display:block;
         color: #1B98A7;
         font-family:Poppins;
@@ -223,10 +225,17 @@ export const ValueBox = Styled.div`
         margin-top:50px;
         clear:both;
         cursor:pointer;
-        width: 124px;
+        width: 100px;
         height: 36px;
-        line-height:36px;
-
+        padding-top:25px;
+        i{
+            display:block;
+            height:8px;
+            width:12px;
+            background: url(${ArrowDown});
+            float: left;
+            margin-top:5px
+        }
     }
     .title{
         display:block;
@@ -254,6 +263,14 @@ export const ValueBox = Styled.div`
     .values{
         float:right;
         width:170px;
+        .plus{
+            display:block;
+            font-size:20px;
+            font-family:Poppins;
+            color: #1B98A7;
+            float:left;
+            margin-right:5px;
+        }
         label{
 
             font-size:20px;

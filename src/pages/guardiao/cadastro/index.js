@@ -12,12 +12,13 @@ import Perfil from './perfil';
 
 function CadastroGuardiao() {
 
-    const [etapa, setEtapa] = useState(1);
+    const [etapa, setEtapa] = useState(2);
 
     const [dados, setDados] = useState({});
 
 
     let dadosAprovado = (dados) => {
+        setDados(dados);
         setEtapa(2)
     }
 
@@ -42,7 +43,7 @@ function CadastroGuardiao() {
                 <Step>
                     <span style={{ width: (25 * etapa) + '%' }}></span>
                 </Step>
-                
+
                 <section>
                     {etapa == 1 ?
                         <Dados aprovado={dadosAprovado} voltar={voltarDados} />
