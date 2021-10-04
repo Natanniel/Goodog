@@ -1,6 +1,11 @@
 import Styled from 'styled-components';
 import bg from './asset/p.png';
 
+import email from '../../../assets/icons/icon_email.png';
+import password from '../../../assets/icons/icon-password.png';
+import facebook from '../../../assets/icons/facebook-login.png';
+import google from '../../../assets/icons/logo-google.png';
+
 export const BackgroundModal = Styled.div`
     height:100vmax;
     width:100%;
@@ -52,6 +57,16 @@ export const BtnFacebook = Styled.span`
     background: #3B5998;
     font-family:Poppins;
     cursor:pointer;
+    i{
+        display:block;
+        background: url(${facebook}) no-repeat;
+        background-size:contain;
+        height: 24px;
+        width: 12px;
+        position:absolute;
+        margin-top: 7px;
+        margin-left: 24px;
+    }
 `
 export const BtnGoogle = Styled.span`
     display:block;
@@ -67,6 +82,16 @@ export const BtnGoogle = Styled.span`
     color: rgba(0, 0, 0, 0.6);
     font-family:Poppins;
     cursor:pointer;
+    i{
+        display:block;
+        background: url(${google}) no-repeat;
+        background-size:contain;
+        height: 18px;
+        width: 18px;
+        position:absolute;
+        margin-top: 9px;
+        margin-left: 22px;
+    }
 `
 
 export const BtnEntrar = Styled.span`
@@ -113,7 +138,20 @@ export const InputDiv = Styled.div`
     position:relative;
     margin-top:17px;
     width:326px;
-   
+    i{
+        width:24px;
+        height:25px;
+        display:block;
+        position:absolute;
+        top:16px;
+        margin-left:290px;
+    }
+    .email{
+        background: url(${email});
+    }
+    .password{
+        background: url(${password});
+    }
 `
 
 export const Input = Styled.input`

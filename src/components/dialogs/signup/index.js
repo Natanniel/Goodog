@@ -134,8 +134,8 @@ function Dialogs({ fechar }) {
             <Modal>
                 <Close onClick={() => fechar()}>X</Close>
                 <Title>Cadastre-se</Title>
-                <BtnFacebook onClick={() => alert('Integração em revisão.')}>Entrar com Facebook</BtnFacebook>
-                <BtnGoogle onClick={() => alert('Desculpe ! o seu token ainda não foi autorizado.')}>Entrar com Google</BtnGoogle>
+                <BtnFacebook onClick={() => alert('Integração em revisão.')}><i className='facebook'></i>Entrar com Facebook</BtnFacebook>
+                <BtnGoogle onClick={() => alert('Desculpe ! o seu token ainda não foi autorizado.')}><i className='google'></i>Entrar com Google</BtnGoogle>
                 <div style={{ margin: '0 auto', marginTop: '16px', width: '238px', border: '1px solid rgba(0,0,0,0.12)' }}></div>
                 <LabelInfo>Ou informe os dados abaixo</LabelInfo>
 

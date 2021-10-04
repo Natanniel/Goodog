@@ -22,15 +22,26 @@ function Inicial() {
                 <Filters>
                     <fieldset style={{ width: 168, height: 55, borderRadius: 3 }}>
                         <legend>Serviço</legend>
+                        <select>
+                            <option >Selecione ...</option>
+                            <option>Hospedagem</option>
+                            <option>Creche</option>
+                            <option>Babá</option>
+                            <option>Passeio</option>
+                        </select>
+                     
                     </fieldset>
                     <fieldset style={{ width: 283, height: 55, borderRadius: 3 }}>
                         <legend>Seu endereço</legend>
+                        <input/>
                     </fieldset>
                     <fieldset style={{ width: 179, height: 55, borderRadius: 3 }}>
                         <legend>Entrada</legend>
+                        <input type='date' style={{width:'95%'}}/>
                     </fieldset>
                     <fieldset style={{ width: 179, height: 55, borderRadius: 3 }}>
                         <legend>Saida</legend>
+                        <input type='date' style={{width:'95%'}}/>
                     </fieldset>
                     <BtnPesquisarnormal>
                         <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>

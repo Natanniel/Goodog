@@ -41,6 +41,27 @@ export const Filters = Styled.div`
             font-family:Poppins;
             margin-left:10px;
         }
+        select{
+            height:30px;
+            border:none;
+            font-size:16px;
+            text-indent: 5px;
+            font-family:Poppins;
+            width:95%;
+            &:focus{
+                outline-width: 0!important;
+            }
+        }
+        input{
+            height:30px;
+            border:none;
+            font-size:16px;
+            text-indent: 5px;
+            font-family:Poppins;
+            &:focus{
+                outline-width: 0!important;
+            }
+        }
     }
 `
 

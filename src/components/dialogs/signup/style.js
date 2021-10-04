@@ -2,8 +2,10 @@ import Styled from 'styled-components';
 import email from '../../../assets/icons/icon_email.png';
 import person from '../../../assets/icons/icon_person.png';
 import contact from '../../../assets/icons/icon-contact.png';
-import password from '../../../assets/icons/icon_password.png';
+import password from '../../../assets/icons/icon-password.png';
 
+import facebook from '../../../assets/icons/facebook-login.png';
+import google from '../../../assets/icons/logo-google.png';
 
 export const BackgroundModal = Styled.div`
     min-height:100vmax;
@@ -66,6 +68,16 @@ export const BtnFacebook = Styled.span`
     background: #3B5998;
     font-family:Poppins;
     cursor:pointer;
+    i{
+        display:block;
+        background: url(${facebook}) no-repeat;
+        background-size:contain;
+        height: 24px;
+        width: 12px;
+        position:absolute;
+        margin-top: 7px;
+        margin-left: 24px;
+    }
 `
 export const BtnGoogle = Styled.span`
     display:block;
@@ -74,15 +86,23 @@ export const BtnGoogle = Styled.span`
     font-size:14px;
     width: 238px;
     margin:0 auto;
-    margin-top:16px;
+    margin-top:10px;
     border-radius: 4px;
     background: #FFFFFF;
     font-family:Poppins;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
     color: rgba(0, 0, 0, 0.6);
     cursor:pointer;
-
-
+    i{
+        display:block;
+        background: url(${google}) no-repeat;
+        background-size:contain;
+        height: 18px;
+        width: 18px;
+        position:absolute;
+        margin-top: 9px;
+        margin-left: 22px;
+    }
 `
 
 export const LabelInfo = Styled.label`

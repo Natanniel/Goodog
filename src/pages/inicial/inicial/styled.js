@@ -520,11 +520,12 @@ export const LasLineTalkUs = Styled.span`
 `
 
 export const SectionFacaParte = Styled.section`
-    width: 100vw; 
+    width: 100%; 
     height: 400px; 
     background: #EEFBFC; 
     margin-top: 80px;
     padding-top:80px;
+    font-family:Poppins;
     @media(max-width: 800px) {
         height:437px;
         padding-top:40px;

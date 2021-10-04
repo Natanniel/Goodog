@@ -30,16 +30,18 @@ function Dialogs({ fechar, nav }) {
             <Modal>
                 <Close onClick={() => fechar()}>X</Close>
                 <Title>Entrar</Title>
-                <BtnFacebook onClick={() => alert('Integração em revisão.')}>Entrar com Facebook</BtnFacebook>
-                <BtnGoogle onClick={() => alert('Desculpe ! o seu token ainda não foi autorizado.')}>Entrar com Google</BtnGoogle>
+                <BtnFacebook onClick={() => alert('Integração em revisão.')}><i className='facebook'></i>Entrar com Facebook</BtnFacebook>
+                <BtnGoogle onClick={() => alert('Desculpe ! o seu token ainda não foi autorizado.')}><i className='google'></i>Entrar com Google</BtnGoogle>
                 <div style={{ width: '238px', borderBottom: '1px solid rgba(0, 0, 0, 0.12)', display: 'block', margin: '0 auto', marginTop: 26 }}></div>
 
                 <LabelInfo>Ou entre com seus dados</LabelInfo>
 
                 <InputDiv>
+                    <i className='email' />
                     <Input placeholder='E-mail' value={email} onChange={(e) => setEmail(e.target.value)} />
                 </InputDiv>
                 <InputDiv>
+                    <i className='password' />
                     <Input placeholder='Senha' type={'password'} value={senha} onChange={(e) => setSenha(e.target.value)} />
                 </InputDiv>
                 <div style={{ height: 47, }}>
