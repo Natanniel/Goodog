@@ -107,7 +107,7 @@ function Inicial({ navigation }) {
                 </BoxRetangle>
             </Retangle>
 
-            <section>
+            <section id='como_funciona'>
                 <Titulo2>Como funciona? </Titulo2>
                 <Subtitulo2>Para quem quer oferecer um bem estar melhor para seu bichinho, a Goodog é o lugar certo</Subtitulo2>
             </section>
@@ -142,7 +142,7 @@ function Inicial({ navigation }) {
                 </SectionCards>
             </Container>
 
-            <SectionFacaParte>
+            <SectionFacaParte id="fazer_parte">
                 <Container>
                     <img src={VectorIndexDog} />
                     <FacaParte style={{}}>
@@ -157,7 +157,7 @@ function Inicial({ navigation }) {
                 </Container>
             </SectionFacaParte>
 
-            <section>
+            <section id="duvidas">
                 <Titulo2 style={{ marginTop: '80px' }}>Dúvidas Frequentes</Titulo2>
                 <Container>
                     <BoxQuestion style={{ marginTop: '40px' }}>

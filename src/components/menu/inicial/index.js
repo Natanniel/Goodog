@@ -104,7 +104,7 @@ function Menu({ nav }) {
                         <Logo />
                     </Link>
                     <Menubox>
-                        <li style={{ width: '80px' }}>Serviço<i></i>
+                        <li style={{ width: '80px' }}><a href="#">Serviço</a><i></i>
                             <div>
                                 <ul>
                                     <li>Hospedagem </li>
@@ -114,9 +114,9 @@ function Menu({ nav }) {
                                 </ul>
                             </div>
                         </li>
-                        <li><a>Como funciona?</a></li>
-                        <li>Fazer parte</li>
-                        <li>Dúvidas</li>
+                        <li><a href="#como_funciona">Como funciona?</a></li>
+                        <li><a href="#fazer_parte">Fazer parte</a></li>
+                        <li><a href="#duvidas">Dúvidas</a></li>
                         <li>Blog</li>
 
                     </Menubox>

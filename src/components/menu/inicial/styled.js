@@ -80,8 +80,13 @@ export const Menubox = Styled.ul`
         margin-left:18px;
         cursor:pointer;
         font-family:Poppins;
+        a{
+            text-decoration:none;
+            color: rgba(0, 0, 0, 0.6);
+
+        }
         &:hover{
-            color: #fff;
+            a{color: #fff;}
             background:#1B98A7;
             i{
                 animation: ${rotate} 0.5s forwards;
