@@ -48,7 +48,10 @@ function Dialogs({ fechar }) {
                                     }
 
                                     api.post('usuario/criar', dados).then(function () {
-                                        toastr.error('Usuario criado com sucesso !');
+                                        
+                                        toastr.success('Usuario criado com sucesso !');
+                                        fechar();
+
                                     }).catch(function () {
                                         toastr.error('Usuario já cadastrado em nosso sistema');
                                     })

@@ -29,19 +29,19 @@ function Inicial() {
                             <option>Babá</option>
                             <option>Passeio</option>
                         </select>
-                     
+
                     </fieldset>
                     <fieldset style={{ width: 283, height: 55, borderRadius: 3 }}>
                         <legend>Seu endereço</legend>
-                        <input/>
+                        <input />
                     </fieldset>
                     <fieldset style={{ width: 179, height: 55, borderRadius: 3 }}>
                         <legend>Entrada</legend>
-                        <input type='date' style={{width:'95%'}}/>
+                        <input type='date' style={{ width: '95%' }} />
                     </fieldset>
                     <fieldset style={{ width: 179, height: 55, borderRadius: 3 }}>
                         <legend>Saida</legend>
-                        <input type='date' style={{width:'95%'}}/>
+                        <input type='date' style={{ width: '95%' }} />
                     </fieldset>
                     <BtnPesquisarnormal>
                         <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
