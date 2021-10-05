@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { Footer, Sitemap,FooterText, SitemapMob, SitemapMobMenu, SitemapBlock, IconApple, IconGoogle, Face, Youtube, Insta } from './style';
+import { Footer, Sitemap, FooterText, SitemapMob, SitemapMobMenu, SitemapBlock, IconApple, IconGoogle, Face, Youtube, Insta } from './style';
 import { Container } from '../../globals';
 
+import { Link, useHistory } from "react-router-dom";
 function footer() {
   return (
     <Footer>
@@ -12,7 +13,11 @@ function footer() {
           <SitemapBlock >
             <span style={{ display: 'block', width: 245 }}>A Goodog</span>
             <ul>
-              <li>Sobre nós</li>
+              <li>
+                <Link to="/#sobre_nos" style={{ textDecoration: 'none', color: '#fff' }}>
+                  Sobre nós
+                </Link>
+              </li>
               <li>Como funciona?</li>
               <li>Termos de uso</li>
               <li>Política de privacidade</li>
@@ -22,10 +27,26 @@ function footer() {
           <SitemapBlock>
             <span style={{ display: 'block', width: 183 }}>Serviços</span>
             <ul>
-              <li>Hotel</li>
-              <li>Berçário</li>
-              <li>Babá</li>
-              <li>Passeio</li>
+              <li>
+                <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
+                  Hotel
+                </Link>
+              </li>
+              <li>
+                <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
+                  Berçário
+                </Link>
+              </li>
+              <li>
+                <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
+                  Babá
+                </Link>
+              </li>
+              <li>
+                <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
+                  Passeio
+                </Link>
+              </li>
             </ul>
           </SitemapBlock>
           <SitemapBlock>
@@ -79,18 +100,18 @@ function footer() {
                 <span></span>
               </li>
             </ul>
-        
+
           </SitemapMobMenu>
           <SitemapBlock >
-             
-              <ul>
-                <li>
-                  <Face />
-                  <Insta />
-                  <Youtube />
-                </li>
-              </ul>
-            </SitemapBlock>
+
+            <ul>
+              <li>
+                <Face />
+                <Insta />
+                <Youtube />
+              </li>
+            </ul>
+          </SitemapBlock>
         </SitemapMob>
         <FooterText></FooterText>
       </Container>
