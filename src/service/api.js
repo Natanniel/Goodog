@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //var host = 'http://localhost:3000';
-var host = 'http://nfe.apolluz.com';
+var host = 'https://nfe.apolluz.com';
 
 // DEV
 const api = axios.create({
