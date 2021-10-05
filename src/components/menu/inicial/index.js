@@ -74,13 +74,13 @@ function Menu({ nav }) {
         setMenu(false);
         setInicio(false);
         setFavoritos(true);
-        setPedidos(false);        
+        setPedidos(false);
         setPets(false);
     }
 
     let verPedidos = () => {
         setMenu(false);
-        setInicio(false);       
+        setInicio(false);
         setPets(false);
         setFavoritos(false);
         setPedidos(true);
@@ -114,7 +114,7 @@ function Menu({ nav }) {
                                 </ul>
                             </div>
                         </li>
-                        <li>Como funciona?</li>
+                        <li><a>Como funciona?</a></li>
                         <li>Fazer parte</li>
                         <li>Dúvidas</li>
                         <li>Blog</li>

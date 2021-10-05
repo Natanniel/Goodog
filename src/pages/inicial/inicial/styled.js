@@ -39,7 +39,7 @@ export const Titulo = Styled.h1`
     line-height: 56px;
     @media(max-width: 800px) {
         font-size:25px;
-        width:151px;
+        width:190px;
         line-height: 24px;
         top:80px;
         left:24px;
