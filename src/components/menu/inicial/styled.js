@@ -62,11 +62,23 @@ export const Menubox = Styled.ul`
     margin-left:30px;
     padding:0px;
     float:left;
-    width:610px;
+    width:685px;
     @media(max-width: 800px) {
         display:none;
     }
-  
+    li:nth-child(1){
+        a{
+            padding: 0px 10px!important;
+            float:left;
+        }
+    }
+    li:nth-child(1):hover{
+        background:none!important;
+        a{
+            color: #fff!important; 
+            background:#1B98A7!important;}
+        }  
+        
     li{
         padding: 0px 10px;
         border-radius: 4px;
@@ -92,6 +104,7 @@ export const Menubox = Styled.ul`
                 animation: ${rotate} 0.5s forwards;
             }
         }
+       
         i{
 
             animation: ${rotateNormal} 0.5s forwards;
@@ -130,7 +143,7 @@ export const Menubox = Styled.ul`
                     padding:0px;
                     &:hover{
                         color: #fff;
-                        background:#1B98A7;
+                        background:#1B98A7!important;
                         border-radius:0px;
                     }
                    
