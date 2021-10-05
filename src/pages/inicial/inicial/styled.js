@@ -383,8 +383,52 @@ export const CardButton = Styled.span`
     font-family:Poppins;
 `
 
+
 export const BoxQuestion = Styled.div`
-    display:'block';
+    .accordion{
+        font-family:Poppins;
+        border:none;
+    }
+    .accordion__item{
+        margin-top:16px;
+       border:none;
+    }
+
+    .accordion__button{
+        background:#fff!important;
+        height:80px;
+        border: 1px solid rgba(0,0,0,0.12);
+        padding:0px;
+        line-height:80px;
+        text-indent:18px;
+        font-size:20px;
+        border-radius:4px;
+    }
+
+    .accordion__button:before {display:none}
+    
+    span{
+        background:url(${ArrowDown});
+        display:block;
+        height: 7px;
+        width: 12px;
+        float:right;
+        margin-top:36px;
+        margin-right:30px;
+        @media(max-width: 800px) {
+            margin-right:22px;
+        }
+    }
+    /*
+display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;*/
+
+  /*  display:'block';
     height:80px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius:4px;
@@ -414,18 +458,7 @@ export const BoxQuestion = Styled.div`
             text-align:left;
         }
     }
-    span{
-        background:url(${ArrowDown});
-        display:block;
-        height: 7px;
-        width: 12px;
-        float:right;
-        margin-top:36px;
-        margin-right:30px;
-        @media(max-width: 800px) {
-            margin-right:22px;
-        }
-    }
+    */
 `
 
 

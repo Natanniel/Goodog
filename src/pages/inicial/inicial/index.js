@@ -17,6 +17,17 @@ import VectorBaba from '../../../assets/icons/Vector-2.png';
 import VectorPasseio from '../../../assets/icons/Vector-3.png';
 import VectorIndexDog from '../../../assets/img/retangleIndexDog.png';
 
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemButton,
+    AccordionItemPanel,
+} from 'react-accessible-accordion';
+
+// Demo styles, see 'Styles' section below for some notes on use.
+import 'react-accessible-accordion/dist/fancy-example.css';
+
 function Inicial({ navigation }) {
 
     let [selected, setSelected] = useState("hospedagem")
@@ -159,26 +170,83 @@ function Inicial({ navigation }) {
 
             <section id="duvidas">
                 <Titulo2 style={{ marginTop: '80px' }}>Dúvidas Frequentes</Titulo2>
+
+
+
+
                 <Container>
                     <BoxQuestion style={{ marginTop: '40px' }}>
-                        <article>Como é feito o pagamento?</article>
-                        <span></span>
-                    </BoxQuestion>
-                    <BoxQuestion>
-                        <article>Os serviços são seguros ?</article>
-                        <span></span>
-                    </BoxQuestion>
-                    <BoxQuestion>
-                        <article>Que tipo de animais são emitidos? </article>
-                        <span></span>
-                    </BoxQuestion>
-                    <BoxQuestion>
-                        <article>Esqueci minha senha </article>
-                        <span></span>
-                    </BoxQuestion>
-                    <BoxQuestion>
-                        <article>Como pedir reembolso?</article>
-                        <span></span>
+                        <Accordion>
+                            <AccordionItem>
+                                <AccordionItemHeading>
+                                    <AccordionItemButton>
+                                        Como é feito o pagamento?
+                                        <span></span>
+                                    </AccordionItemButton>
+                                </AccordionItemHeading>
+                                <AccordionItemPanel>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </AccordionItemPanel>
+                            </AccordionItem>
+                            <AccordionItem>
+                                <AccordionItemHeading>
+                                    <AccordionItemButton>
+                                        Os serviços são seguros ?
+                                        <span></span>
+                                    </AccordionItemButton>
+                                </AccordionItemHeading>
+                                <AccordionItemPanel>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </AccordionItemPanel>
+                            </AccordionItem>
+                            <AccordionItem>
+                                <AccordionItemHeading>
+                                    <AccordionItemButton>
+                                        Os serviços são seguros ?
+                                        <span></span>
+                                    </AccordionItemButton>
+                                </AccordionItemHeading>
+                                <AccordionItemPanel>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </AccordionItemPanel>
+                            </AccordionItem>
+                            <AccordionItem>
+                                <AccordionItemHeading>
+                                    <AccordionItemButton>
+                                        Esqueci minha senha
+                                        <span></span>
+                                    </AccordionItemButton>
+                                </AccordionItemHeading>
+                                <AccordionItemPanel>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </AccordionItemPanel>
+                            </AccordionItem>
+                            <AccordionItem>
+                                <AccordionItemHeading>
+                                    <AccordionItemButton>
+                                        Como pedir reembolso?
+                                        <span></span>
+                                    </AccordionItemButton>
+                                </AccordionItemHeading>
+                                <AccordionItemPanel>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                                </AccordionItemPanel>
+                            </AccordionItem>
+                        </Accordion>
+
+
+
+
                     </BoxQuestion>
                     <LastLineQuestion>
                         <LastLineQuestionTitle>Ainda esta com dúvida?</LastLineQuestionTitle>

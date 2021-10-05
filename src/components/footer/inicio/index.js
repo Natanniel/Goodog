@@ -18,7 +18,10 @@ function footer() {
                   Sobre nós
                 </Link>
               </li>
-              <li>Como funciona?</li>
+              <li>
+                <Link to="/#como_funciona" style={{ textDecoration: 'none', color: '#fff' }}>
+                  Como funciona?
+                </Link></li>
               <li>Termos de uso</li>
               <li>Política de privacidade</li>
               <li>GDPR</li>
