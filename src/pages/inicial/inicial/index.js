@@ -100,7 +100,7 @@ function Inicial({ navigation }) {
                         </BtnPesquisarnormal>
                     </Filters>
                     <BtnPesquisar>
-                        <Link to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
+                        <Link id="pesquisar" to="/cliente" style={{ textDecoration: 'none', color: '#fff' }}>
                             Pesquisar
                         </Link>
                     </BtnPesquisar>
@@ -118,25 +118,25 @@ function Inicial({ navigation }) {
                         <IconCard src={VectorHospedagem} />
                         <CardTitle>Hospedagem</CardTitle>
                         <CardSubtitle style={{ width: '165px' }}>Lugar de conforto para seu pet pernoitar</CardSubtitle>
-                        <CardButton style={{ color: '#1B98A7', borderColor: '#1B98A7' }}>encontrar</CardButton>
+                        <CardButton style={{ color: '#1B98A7', borderColor: '#1B98A7' }} onClick={() => document.getElementById("pesquisar").click()}>encontrar</CardButton>
                     </Card>
                     <Card>
                         <IconCard src={VectorCreche} />
                         <CardTitle>Creche</CardTitle>
                         <CardSubtitle style={{ width: '97px' }}>Diversão o dia todo</CardSubtitle>
-                        <CardButton style={{ color: '#FCC23E', borderColor: '#FCC23E' }}>encontrar</CardButton>
+                        <CardButton style={{ color: '#FCC23E', borderColor: '#FCC23E' }} onClick={() => document.getElementById("pesquisar").click()}>encontrar</CardButton>
                     </Card>
                     <Card>
                         <IconCard src={VectorBaba} />
                         <CardTitle>Babá</CardTitle>
                         <CardSubtitle>Visitas em sua casa</CardSubtitle>
-                        <CardButton style={{ color: '#EE4770', borderColor: '#EE4770' }}>encontrar</CardButton>
+                        <CardButton style={{ color: '#EE4770', borderColor: '#EE4770' }} onClick={() => document.getElementById("pesquisar").click()}>encontrar</CardButton>
                     </Card>
                     <Card>
                         <IconCard src={VectorPasseio} />
                         <CardTitle>Passeio</CardTitle>
                         <CardSubtitle>Para descontrair</CardSubtitle>
-                        <CardButton style={{ color: '#193B80', borderColor: '#193B80' }}>encontrar</CardButton>
+                        <CardButton style={{ color: '#193B80', borderColor: '#193B80' }} onClick={() => document.getElementById("pesquisar").click()}>encontrar</CardButton>
                     </Card>
 
                 </SectionCards>

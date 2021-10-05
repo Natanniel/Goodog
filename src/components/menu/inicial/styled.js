@@ -70,7 +70,7 @@ export const Menubox = Styled.ul`
     li{
         padding: 0px 10px;
         border-radius: 4px;
-        height: 36px;
+        min-height: 36px;
         line-height:36px;
         cursor: pointer;
         float:left;
