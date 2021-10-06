@@ -40,6 +40,126 @@ export const Step = Styled.div`
     }
 `
 
+export const LabelForm = Styled.div`
+    height: 39px;
+    width: 275px;
+    border-radius: nullpx;
+    font-size: 14px;
+    font-family: Poppins;
+    letter-spacing: 0.25px;
+    
+`
+
+export const BtnUploadChange = Styled.button`
+     display:block;
+     margin-right:5px;
+     padding:5px 10px;
+     margin:0 auto;
+    background: #1B98A7;
+    border-radius: 4px;
+    border:1px solid #1B98A7;
+    color:#fff;
+    cursor:pointer;
+    &:hover{
+        color:#1B98A7;
+        background:#fff;
+    }
+`
+
+export const MinimoFoto = Styled.div`
+    color: #1B98A7;
+    font-family:Poppins;
+    height:170px;
+    margin-top:7px;
+    div{
+       
+        ul{
+            height: 51px;
+            width: 135px;
+            float:left;
+            
+
+        }
+    }
+`
+
+export const BtnUpload = Styled.button`
+    display:block;
+    background: #1B98A7;
+    height: 36px;
+    width: 529px;
+    border-radius: 4px;
+    border:1px solid #1B98A7;
+    color:#fff;
+    cursor:pointer;
+    &:hover{
+        color:#1B98A7;
+        background:#fff;
+    }
+`
+
+export const RadioButtons = Styled.div`
+    ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+        .selected{
+            border:1px solid #1B98A7;
+        }
+        li{
+            margin-top:8px;
+            height: 100px;
+            width: 530px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+            font-size:14px;
+            font-family:Poppins;
+            line-height:100px;
+            text-indent:17px;
+            span{
+                display:block;
+                float:left;
+            }
+            input{
+                display:block;
+                height:24px;
+                width:24px;
+                float:right;
+                margin-top:38px;
+                margin-right:16px;
+               
+            }
+            input:checked{
+                border: 1px solid red;
+                background-color: red;
+            }
+        }
+    }
+`
+
+export const Options = Styled.div`
+    span{
+        display:block;
+        float:left;
+        margin-right:16px;        
+        height: 32px;
+        border-radius: 16px;
+        background: rgba(33, 33, 33, 0.08);
+        font-size:14px;
+        height: 32px;
+        width:158px;
+        text-align:center;
+        line-height:32px;
+        font-family:Poppins;
+        cursor:pointer;
+    }
+    .selected{       
+        background:#1B98A7!important;
+        color:#fff!important;
+    }
+`
+
 export const Titulo2 = Styled.div`
     font-family: Poppins;
     font-style: normal;
@@ -87,7 +207,7 @@ export const Row = Styled.div`
             font-family:Poppins;
             border:none
         }
-        input:focus, select:focus {
+        input:focus, select:focus,textarea:focus {
             outline-width: 0!important;
         }
     }
@@ -190,8 +310,13 @@ export const Experiencia = Styled.div`
         input{
             text-align:center;
             display:block;
-            height:50px;
+            height:52px;
             padding:0px;
+            border:none;
+            font-size:16px;
+            &:focus{
+                outline-width: 0!important;
+            }
         }
     }
 

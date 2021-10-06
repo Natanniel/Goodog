@@ -12,6 +12,8 @@ import ClienteHeroServiceSubmit from '../pages/inicial/heroDetailSubmit'
 import ClienteHeroConversar from '../pages/inicial/conversar'
 import ClientePedido from '../pages/inicial/pedidos'
 
+import ClientePerfil from '../pages/usuario/perfil'
+
 import GuardiaoCadastro from '../pages/guardiao/cadastro'
 
 const routes = () => {
@@ -19,12 +21,16 @@ const routes = () => {
         <div>
             <Route path="/" exact component={Inicio} />
             <Route path="/recuperarsenha" exact component={RecuperaSenha} />
+
             <Route path="/cliente" exact component={ClientePlatform} />
             <Route path="/cliente/pedidos" exact component={ClientePedido} />
             <Route path="/cliente/hero" exact component={ClienteHero} />
             <Route path="/cliente/hero/service" exact component={ClienteHeroService} />
             <Route path="/cliente/hero/submit" exact component={ClienteHeroServiceSubmit} />
             <Route path="/cliente/hero/conversar" exact component={ClienteHeroConversar} />
+
+            <Route path="/cliente/perfil" exact component={ClientePerfil} />
+
 
             <Route path="/guardiao/cadastro" exact component={GuardiaoCadastro} />
 

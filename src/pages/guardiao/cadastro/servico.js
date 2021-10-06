@@ -15,6 +15,10 @@ function Servico({ aprovado, voltar }) {
 
     const [hotelAdicional, setHotalAdicional] = useState(false);
     const [hotelValor, setHotelValor] = useState('0');
+    const [hotelSuperValor, setHotelSuperValor] = useState('0');
+    const [hotelAdicionalValor, setHotelAdicionalValor] = useState('0');
+    const [hotelFeriadosValor, setHotelFeriadosValor] = useState('0');
+    const [hotelExtraValor, setHotelExtraValor] = useState('0');
 
     const [crecheAdicional, setCrecheAdicional] = useState(false);
     const [crecheValor, setCrecheValor] = useState('0')
@@ -32,14 +36,18 @@ function Servico({ aprovado, voltar }) {
         if (hotel || creche || baba || passeio) {
 
             let dados = {
-                hotelValor: hotel,
-                crecheValor: creche,
-                babaValor: baba,
-                passeioValor: passeio
+                hotel: {
+                    ativo: hotel,
+                    valor: hotelValor,
+                    superCliente: hotelSuperValor,
+                    petAdicional: hotelAdicionalValor,
+                    feriados: hotelFeriadosValor,
+                    tempoExtra: hotelExtraValor
+                }
             }
-            toastr.error("Você deve informar um valor de serviço válido.");
-//            aprovado(dados);
-      //      window.scrollTo(0, 0)
+
+            aprovado(dados);
+            window.scrollTo(0, 0)
         } else
             toastr.error('Você deve informar pelo menos 1 serviço.')
 
