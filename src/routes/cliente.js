@@ -12,9 +12,10 @@ import ClienteHeroServiceSubmit from '../pages/inicial/heroDetailSubmit'
 import ClienteHeroConversar from '../pages/inicial/conversar'
 import ClientePedido from '../pages/inicial/pedidos'
 
-import ClientePerfil from '../pages/usuario/perfil'
 
 import GuardiaoCadastro from '../pages/guardiao/cadastro'
+
+import Usuario from './usuario';
 
 const routes = () => {
     return (
@@ -29,7 +30,7 @@ const routes = () => {
             <Route path="/cliente/hero/submit" exact component={ClienteHeroServiceSubmit} />
             <Route path="/cliente/hero/conversar" exact component={ClienteHeroConversar} />
 
-            <Route path="/cliente/perfil" exact component={ClientePerfil} />
+            <Route path="/usuario" component={Usuario} />
 
 
             <Route path="/guardiao/cadastro" exact component={GuardiaoCadastro} />

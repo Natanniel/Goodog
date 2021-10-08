@@ -21,15 +21,14 @@ function Inicial() {
             <Menu />
             <Content>
                 <div style={{ width: 1000, margin: '0 auto', height: 100, position: 'relative', top: 525 }}>
-                    <Link to={'/cliente/hero/conversar'} style={{ float: 'right', display: 'block', position: 'relative', height: 30,top:-16,left:-5, width: 330, cursor: 'pointer' }}></Link>
+                    <Link to={'/cliente/hero/conversar'} style={{ float: 'right', display: 'block', position: 'relative', height: 30, top: -16, left: -5, width: 330, cursor: 'pointer' }}></Link>
                     <Link to={'/cliente/hero/service'} style={{ float: 'right', display: 'block', position: 'absolute', left: '670px', top: '23px', height: 30, width: 330, cursor: 'pointer' }}></Link>
                 </div>
             </Content>
 
             <ContentMB>
-                <Link to={'/cliente'} style={{ float: 'right', display: 'block', position: 'absolute', left: '10px', top: '10px', height: 30, width: 50, cursor: 'pointer'}}></Link>
+                <Link to={'/cliente'} style={{ float: 'right', display: 'block', position: 'absolute', left: '10px', top: '10px', height: 30, width: 50, cursor: 'pointer' }}></Link>
                 <Link to={'/cliente/hero/service'} style={{ float: 'right', display: 'block', position: 'absolute', left: '20px', top: '670px', height: 30, width: 330, cursor: 'pointer' }}></Link>
-         
             </ContentMB>
 
             <Footer />

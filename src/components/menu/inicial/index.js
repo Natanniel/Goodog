@@ -126,8 +126,8 @@ function Menu({ nav }) {
                                 <LabelNomeUsuario>Usuario <i></i>
                                     <div>
                                         <ul>
-                                            <li><Link to='/cliente/perfil'>Perfil </Link></li>
-                                            <li>Pets</li>
+                                            <li><Link to='/usuario/perfil'>Perfil </Link></li>
+                                            <li><Link to='/usuario/pets'>Pets </Link></li>
                                             <li>Pedidos</li>
                                             <li>Favoritos</li>
                                             <li onClick={() => sair()}>Sair</li>
