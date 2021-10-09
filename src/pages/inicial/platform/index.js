@@ -8,10 +8,18 @@ import { Retangle, BoxRetangle, Filters, BtnPesquisarnormal } from './styled'
 import { Container } from '../../../components/globals'
 import { SearchTopics, SearchTypes, LeftTitleFilterSpan, LeftTitleFilterSpan2, Box, LeftDiv, RankingStars, Valor, FinaisSemana, RankingRecorrencia, ProfileRanking, RightDiv, Profile, ProfileInfo, ProfileNome, LeftTitleFilter, BtnFilter, SelectFilter, Map, Separator, CardUser } from './styled'
 import { Link, useHistory } from "react-router-dom";
-
+import { GoogleMap, Marker, withGoogleMap, withScriptjs } from "react-google-maps"
 
 function Inicial() {
 
+    const Mapa = withScriptjs(withGoogleMap((props) =>
+        <GoogleMap
+            defaultZoom={8}
+            defaultCenter={{ lat: -34.397, lng: 150.644 }}
+        >
+            {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
+        </GoogleMap>
+    ))
 
 
     return (
@@ -75,6 +83,7 @@ function Inicial() {
 
                     <SearchTypes>
                         <span id="comboSearch" style={{ float: 'left' }}>Mais relevantes </span>
+
                         <span id="mapView">Mapa</span>
 
                     </SearchTypes>
@@ -143,12 +152,18 @@ function Inicial() {
 
                 </LeftDiv>
                 <RightDiv>
-                    <Map>MAPA</Map>
+                    <Mapa
+                        isMarkerShown
+                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8KQqard36yI5Dr28EfNPv80cYvxu67Uw&v=3.exp&libraries=geometry,drawing,places"
+                        loadingElement={<div style={{ height: `688px`, width: `393px` }} />}
+                        containerElement={<div style={{ height: `688px`, width: `393px` }} />}
+                        mapElement={<div style={{ height: `688px`, width: `393px` }} />}
+                    />
                 </RightDiv>
 
             </Container>
 
-
+            
             <Footer />
 
         </div>

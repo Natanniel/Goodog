@@ -19,9 +19,7 @@ function footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/#como_funciona" style={{ textDecoration: 'none', color: '#fff' }}>
-                  Como funciona?
-                </Link></li>
+                Como funciona?</li>
               <li>Termos de uso</li>
               <li>Política de privacidade</li>
               <li>GDPR</li>
@@ -70,6 +68,7 @@ function footer() {
             </ul>
           </SitemapBlock>
           <SitemapBlock >
+          
             <span style={{ display: 'block', width: 111 }}>Siga-nos</span>
             <ul>
               <li>
