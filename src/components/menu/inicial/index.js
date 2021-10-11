@@ -125,6 +125,19 @@ function Menu({ nav }) {
                     <MenuBoxRight>
                         {logado ? (
                             <div>
+                                  <Idioma>
+                                    <i></i>
+                                    <span className='brasil' />
+                                    <div>
+                                        <ul>
+                                            <span />
+                                            <span />
+                                            <span />
+                                            <span />
+                                            <span />
+                                        </ul>
+                                    </div>
+                                </Idioma>
                                 <LabelNomeUsuario>{nome} <i></i>
                                     <div>
                                         <ul>
@@ -137,11 +150,7 @@ function Menu({ nav }) {
                                     </div>
                                 </LabelNomeUsuario>
                                 <ImgUser></ImgUser>
-                                <Idioma>
-                                    <span className='brasil' />
-                                    <i></i>
-                                    <div></div>
-                                </Idioma>
+                              
                             </div>
                         ) : (
                             <div>

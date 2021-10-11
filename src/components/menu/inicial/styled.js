@@ -383,7 +383,7 @@ export const LabelNomeUsuario = Styled.span`
     display: block;
     height: 16px;
     min-width:100px;
-    max-width:115px;
+    max-width:100px;
     margin-left:10px;
     color: rgba(0, 0, 0, 0.87);
     float:right;
@@ -428,8 +428,10 @@ export const LabelNomeUsuario = Styled.span`
                     height:34px;
                     line-height:34px;
                     padding-top:0px;
+                    a{text-decoration:none; color:#000}
                     &:hover{
                         color: #fff;
+                        a{color: #fff;}
                         background:#1B98A7;
                     }
                    
