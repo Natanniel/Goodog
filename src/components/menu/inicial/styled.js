@@ -218,7 +218,8 @@ export const ImgUser = Styled.span`
 export const LabelNomeUsuario = Styled.span`
     display: block;
     height: 16px;
-    width:100px;
+    min-width:100px;
+    max-width:115px;
     margin-left:10px;
     color: rgba(0, 0, 0, 0.87);
     float:right;

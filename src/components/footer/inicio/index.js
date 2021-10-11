@@ -68,11 +68,13 @@ function footer() {
             </ul>
           </SitemapBlock>
           <SitemapBlock >
-          
+
             <span style={{ display: 'block', width: 111 }}>Siga-nos</span>
             <ul>
               <li>
-                <Face />
+                <Link to="/admin" style={{ textDecoration: 'none', color: '#fff' }}>
+                  <Face />
+                </Link>
                 <Insta />
                 <Youtube />
               </li>

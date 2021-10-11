@@ -7,6 +7,8 @@ import { Container } from '../components/globals'
 
 import Perfil from '../pages/usuario/perfil/index';
 import Pets from '../pages/usuario/pet/index';
+import Pedidos from '../pages/usuario/pedidos/index';
+import Favoritos from '../pages/usuario/favoritos/index';
 
 const routes = () => {
     return (
@@ -15,6 +17,9 @@ const routes = () => {
             <Container>
                 <Route path="/usuario/perfil" exact component={Perfil} />
                 <Route path="/usuario/pets" exact component={Pets} />
+                <Route path="/usuario/pedidos" exact component={Pedidos} />
+                <Route path="/usuario/favoritos" exact component={Favoritos} />
+
             </Container>
             <Footer />
 

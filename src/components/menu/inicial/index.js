@@ -17,6 +17,7 @@ function Menu({ nav }) {
     let [visivel, setVisivel] = useState(false);
     let [visivelLogin, setVisivelLogin] = useState(false);
     let [logado, setLogado] = useState(false);
+    let [nome, setNome] = useState('');
 
     let [inicio, setInicio] = useState(true);
     let [menu, setMenu] = useState(false);
@@ -30,8 +31,10 @@ function Menu({ nav }) {
 
     useEffect(() => {
         var token = Cookies.get("usuario");
-        if (token != undefined)
-            setLogado(true)
+        if (token != undefined) {
+            setLogado(true);
+            setNome(Cookies.get("nome"));
+        }
     }, [])
 
     let fecharModalSignup = () => {
@@ -123,13 +126,13 @@ function Menu({ nav }) {
                     <MenuBoxRight>
                         {logado ? (
                             <div>
-                                <LabelNomeUsuario>Usuario <i></i>
+                                <LabelNomeUsuario>{nome} <i></i>
                                     <div>
                                         <ul>
                                             <li><Link to='/usuario/perfil'>Perfil </Link></li>
                                             <li><Link to='/usuario/pets'>Pets </Link></li>
-                                            <li>Pedidos</li>
-                                            <li>Favoritos</li>
+                                            <li><Link to='/usuario/pedidos'>Pedidos </Link></li>
+                                            <li><Link to='/usuario/favoritos'>Favoritos</Link></li>
                                             <li onClick={() => sair()}>Sair</li>
                                         </ul>
                                     </div>

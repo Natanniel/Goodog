@@ -14,6 +14,8 @@ function Dialogs({ fechar, nav }) {
     let login = () => {
         api.post('usuario/login', { email, senha }).then(function (e) {
             Cookies.set('usuario', e.data.id);
+            Cookies.set('nome', e.data.nome);
+            
             window.location.reload();
         }).catch(function () {
             toastr.error('Usuario ou senha inválidos');

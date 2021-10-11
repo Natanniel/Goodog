@@ -199,7 +199,7 @@ export const Row = Styled.div`
             letter-spacing: 0.4px;
             color: rgba(0, 0, 0, 0.6);
         }
-        input,select{
+        input,select,textarea{
             display:block;
             height:100%;
             width:100%;

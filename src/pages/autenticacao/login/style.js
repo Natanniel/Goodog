@@ -34,7 +34,7 @@ export const Titulo = Styled.h1`
     font-size:32px;
     text-align:center;
     margin-top:33px;
-    font-family:Inter-bold;
+    font-family:PoppinsBold;
     margin-bottom:0px;
     margin-top:33px;
 `
@@ -48,6 +48,7 @@ export const SubTitulo = Styled.span`
     font-family:Inter;
     height:34px;
     line-height:34px;
+    font-family:Poppins;
 `
 
 export const Box = Styled.div`
@@ -63,6 +64,7 @@ export const Box = Styled.div`
     padding-left:40px;
     padding-right:40px;
     font-family:Inter;
+    font-family:Poppins;
 `
 
 export const Label = Styled.span`
@@ -72,7 +74,7 @@ export const Label = Styled.span`
     color:#000;
     height:34px;
     line-height:34px;
-    font-family: Inter-bold;
+    font-family:Poppins;
 `
 
 export const Input = Styled.input`
@@ -86,6 +88,7 @@ export const Input = Styled.input`
     height:44px;
     text-indent:10px;
     padding: 0px;
+    font-family:Poppins;
 `
 
 export const RecoverPassword = Styled.span`
@@ -98,6 +101,7 @@ export const RecoverPassword = Styled.span`
         height: 34px;
         line-height:34px;
         font-size:14px;  
+        font-family:Poppins;
     }
 `
 
@@ -115,7 +119,7 @@ export const Checkbox = Styled.input`
 export const LabelCheckbox = Styled.label`
     margin-left:14px;
     font-size:14px;
-    font-family:Inter;
+    font-family:Poppins;
     height:24px;
     display:block;
 `
@@ -132,6 +136,7 @@ export const BtnEntrar = Styled.button`
     background:#1B98A7;
     border: none;
     border-radius:4px;
-    font-family:Inter;
+    font-family:Poppins;
     cursor:pointer;
+    font-size:16px;
 `

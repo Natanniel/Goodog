@@ -20,9 +20,10 @@ export const Logo = Styled.span`
 
 
 export const Menu = Styled.ul`
-margin-top:60px;
-padding-left:0px;
+    margin-top:60px;
+    padding-left:0px;
     li{
+        cursor:pointer;
         display:block;
         width: 255px;
         height: 56px;
@@ -33,5 +34,19 @@ padding-left:0px;
         font-size:16px;
         font-family:Mulish;
         border-left:3px solid ${props => props.selected == true ? "#1B98A7" : "#363740"};         
+        a{
+            text-decoration:none;
+            color:#A4A6B3;
+        }
+        &:hover{
+            a{color:#1B98A7;}
+            color:#1B98A7;
+        }
+    }
+    .selected{
+        color: #1B98A7!important;
+        a{color: #1B98A7!important;}
+        border-left:3px solid #1B98A7;
+        width: 252px!important;
     }
 `

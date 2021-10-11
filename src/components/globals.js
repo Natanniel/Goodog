@@ -8,7 +8,7 @@ export const Container = Styled.section`
         }
 `
 export const Button = Styled.button`
-    display: block;
+    display: inline-block;
     height: 36px;
     border: 1px solid #1B98A7;
     border-radius: 4px;
@@ -20,10 +20,14 @@ export const Button = Styled.button`
     font-family: PoppinsLight;
     font-size: 14px;
     padding: 5px 14px;
+    line-height:25px;
     &:hover{
         color: #1B98A7;
         background: #fff;
-    
+    }
+    svg{
+        float:left !important;
+        margin-right:5px !important;
     }
 `
 export const ButtonWhite = Styled.button`
@@ -38,7 +42,8 @@ export const ButtonWhite = Styled.button`
     text-align: center;
     font-family: PoppinsLight;
     font-size: 14px;
-    padding: 5px 14px;    
+    padding: 5px 14px;  
+      
 `
 
 export const Titulo = Styled.div`
@@ -95,10 +100,58 @@ export const Input = Styled.fieldset`
 `
 
 export const Retangle = Styled.div`
-    height: 100px;
+    min-height: 100px;
     width:100%;
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box; 
     border-radius: 4px;
+`
+
+export const Box = Styled.div`
+    height: 100px;
+    width:100%;
+    background: #FFFFFF;
+    padding:16px 24px;
+/* 06 dp */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+`
+
+export const Tabs = Styled.div`
+
+    display:flex;
+    flex-direction: row;
+    @media(max-width: 800px) {
+        display:none;
+      }
+    div{
+       padding-bottom:10px;
+        margin-right:33px;
+       cursor:pointer;
+            span{
+                display:block;
+                text-align: center;
+                font-size:14px;
+                margin-top:9px;
+                font-family:Poppins;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            label{
+                font-size:10px;
+                text-align:center;
+                font-family:PoppinsLight;
+                padding-left:16px;
+                padding-right:16px;
+                padding-top:2px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+    }
+    .selected{
+        box-shadow: inset 0px -2px 0px #1B98A7;
+        span{
+            color:#000!important;
+        }
+    }
+
 `

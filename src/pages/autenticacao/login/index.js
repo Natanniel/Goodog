@@ -24,7 +24,7 @@ function Login({ navigation }) {
 
     return (
         <Background>
-            <DivOpacity>
+            <DivOpacity style={{}}>
 
                 <Logo src={ImagemLogo} />
                 <Titulo>Bem-vindo!</Titulo>
