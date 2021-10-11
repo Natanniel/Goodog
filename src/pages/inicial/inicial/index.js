@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 // import { Container } from './styles';
 import Menu from '../../../components/menu/inicial';
 import Footer from '../../../components/footer/inicio';
-import { Retangle, BoxRetangle, Cabecalho, Filters, ItensInput } from './styled'
+import { Retangle, BoxRetangle, Cabecalho, Filters, ItensInput, Sofa, Dog, Baba, Passeio, Creche } from './styled'
 
 import { Link, useHistory } from "react-router-dom";
 import { BtnPesquisar, Itens, BtnPesquisarnormal, SectionFacaParte, FacaParte, Container, Titulo2, Subtitulo2, SectionCards, Card, IconCard, CardTitle, CardSubtitle, CardButton, Titulo, SubTitulo } from './styled'
@@ -12,9 +12,9 @@ import { BoxQuestion, LastLineQuestion, LastLineQuestionTitle, LasLineGroup, Las
 import Modal from 'styled-react-modal'
 
 import VectorHospedagem from '../../../assets/icons/Vector.png';
-import VectorCreche from '../../../assets/icons/Vector-1.png';
-import VectorBaba from '../../../assets/icons/Vector-2.png';
-import VectorPasseio from '../../../assets/icons/Vector-3.png';
+import VectorCreche from '../../../assets/icons/creche.png';
+import VectorBaba from '../../../assets/icons/baba.png';
+import VectorPasseio from '../../../assets/icons/passeio.png';
 import VectorIndexDog from '../../../assets/img/retangleIndexDog.png';
 
 import {
@@ -43,6 +43,7 @@ function Inicial({ navigation }) {
 
                 <BoxRetangle>
                     <Itens>
+
                         <span>HOSPEDAGEM</span>
                         <label>Lugar de conforto para o seu pet pernoitar</label>
                     </Itens>
@@ -61,7 +62,6 @@ function Inicial({ navigation }) {
 
                     <ItensInput>
                         <legend>Seu endereço</legend>
-
                     </ItensInput>
                     <ItensInput>
                         <legend>Quando?</legend>
@@ -72,22 +72,36 @@ function Inicial({ navigation }) {
 
 
                     <Cabecalho>
-                        <div className={selected == "hospedagem" ? 'selected' : null} onClick={() => setSelected("hospedagem")}>
-                            <span>HOSPEDAGEM</span>
-                            <label>Lugar de conforto para seu pet pernoitar</label>
+                        <div className={selected == "hospedagem" ? 'selected' : null} style={{ boxShadow: selected == "hospedagem" ? "inset 0px -2px 0px rgb(27, 152, 167)" : "none" }} onClick={() => setSelected("hospedagem")}>
+                            <Sofa />
+                            <div>
+                                <span>HOSPEDAGEM</span>
+                                <label>Conforto para seu pet pernoitar</label>
+                            </div>
                         </div>
-                        <div className={selected == "creche" ? 'selected' : null} onClick={() => setSelected("creche")}>
-                            <span>CRECHE</span>
-                            <label>Diversão o dia todo</label>
+                        <div className={selected == "creche" ? 'selected' : null} style={{ boxShadow: selected == "creche" ? "inset 0px -2px 0px #fcc23e" : "none" }} onClick={() => setSelected("creche")}>
+                            <Creche />
+                            <div>
+                                <span>CRECHE</span>
+                                <label>Diversão o dia todo</label>
+                            </div>
                         </div>
-                        <div className={selected == "baba" ? 'selected' : null} onClick={() => setSelected("baba")}>
-                            <span>BABÁ</span>
-                            <label>Visitas em sua casa</label>
+                        <div className={selected == "baba" ? 'selected' : null} style={{ boxShadow: selected == "baba" ? "inset 0px -2px 0px #ee4770" : "none" }} onClick={() => setSelected("baba")}>
+                            <Baba />
+                            <div>
+                                <span>BABÁ</span>
+                                <label>Visitas em sua casa</label>
+                            </div>
                         </div>
-                        <div className={selected == "passeio" ? 'selected' : null} onClick={() => setSelected("passeio")}>
-                            <span>PASSEIO</span>
-                            <label>Para descontrair</label>
+
+                        <div className={selected == "passeio" ? 'selected' : null} style={{ boxShadow: selected == "passeio" ? "inset 0px -2px 0px #234b9d" : "none" }} onClick={() => setSelected("passeio")}>
+                            <Passeio />
+                            <div>
+                                <span>PASSEIO</span>
+                                <label>Para descontrair</label>
+                            </div>
                         </div>
+
                     </Cabecalho>
                     <Filters>
                         <fieldset style={{ width: 350, height: 55, borderRadius: 3 }}>

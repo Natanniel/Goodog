@@ -3,6 +3,11 @@ import BackgroundRetangle from '../../../assets/img/homeRetangle.png';
 import BackgroundRetangleMobile from '../../../assets/img/homeRetangleMobile.png';
 import ArrowDown from '../../../assets/icons/arrow-down.png';
 import bgretangulo from './retangulo.png';
+import iconSofa from '../../../assets/icons/Vector.png';
+import iconDog from '../../../assets/icons/dog.png';
+import iconBaba from '../../../assets/icons/baba.png';
+import iconPasseio from '../../../assets/icons/passeio.png';
+import iconCreche from '../../../assets/icons/creche.png';
 
 
 export const Retangle = Styled.div`
@@ -93,32 +98,39 @@ export const Cabecalho = Styled.div`
     flex-direction: row;
     margin-top:16px;
     margin-left:24px;
+    
+    margin-right: 24px;
     @media(max-width: 800px) {
         display:none;
       }
     div{
-       padding-bottom:10px;
-       cursor:pointer;
+        padding-bottom:10px;
+        flex:1;
+        display:flex;
+        flex-direction: row;
+        cursor:pointer;
+        div{ 
+            flex:1;
+            display:block;
             span{
                 display:block;
-                text-align: center;
                 font-size:14px;
                 margin-top:9px;
                 font-family:Poppins;
                 color: rgba(0, 0, 0, 0.6);
+                text-align:left;
             }
             label{
                 font-size:10px;
-                text-align:center;
                 font-family:PoppinsLight;
-                padding-left:16px;
-                padding-right:16px;
                 padding-top:2px;
                 color: rgba(0, 0, 0, 0.6);
+                text-align:left;
+                display:block;
             }
+        }
     }
-    .selected{
-        box-shadow: inset 0px -2px 0px #1B98A7;
+    .selected{       
         span{
             color:#000!important;
         }
@@ -211,6 +223,60 @@ export const BtnPesquisarnormal = Styled.span`
         }
     }
 `
+export const Sofa = Styled.span`
+    display:block;
+    background: url(${iconSofa});
+    background-size:contain;
+    height:32px;
+    width:32px;
+    margin-top:10px;
+    margin-right:10px;
+    margin-left:10px;
+`;
+
+export const Dog = Styled.span`
+    display:block;
+    background: url(${iconDog});
+    height:32px;
+    width:32px;
+    margin-top:10px;
+    margin-right:10px;
+    margin-left:10px;
+`;
+
+export const Baba = Styled.span`
+    display:block;
+    background: url(${iconBaba});
+    background-size:contain;
+    height:32px;
+    width:32px;
+    margin-top:10px;
+    margin-right:10px;
+    margin-left:10px;
+`;
+
+export const Passeio = Styled.span`
+    display:block;
+    background: url(${iconPasseio}) 100% 100% ;
+    height:32px;
+    width:32px;
+    margin-top:10px;
+    margin-right:10px;
+    margin-left:10px;
+    background-size:contain;
+`;
+
+export const Creche = Styled.span`
+    display:block;
+    background: url(${iconCreche}) 100% 100% ;
+    height:32px;
+    width:32px;
+    margin-top:10px;
+    margin-right:10px;
+    margin-left:10px;
+    background-size:contain;
+`;
+
 
 export const Itens = Styled.span`
     display:none;
@@ -225,6 +291,7 @@ export const Itens = Styled.span`
         margin-top:16px;
         padding-top:14px;
         padding-left:8px;
+        margin-right: 24px;
         font-family:Poppins;
     }  
     span{
@@ -275,7 +342,7 @@ export const Titulo2 = Styled.h2`
     display:block;
     margin:0 auto;
     font-size: 34px;
-    margin-top: 161px;
+    margin-top: 180px;
     text-align:center;
     font-size:34px;
     color: rgba(0, 0, 0, 0.87);

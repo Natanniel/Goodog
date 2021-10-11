@@ -4,6 +4,13 @@ import BG from './asset/p.png';
 import ArrowBottom from '../../../assets/icons/arrow-down.png'
 import ArrowUp from '../../../assets/icons/arrow-up.png'
 
+import Brasil from '../../../assets/icons/brasil.png';
+import Espanha from '../../../assets/icons/espanha.png';
+import Inglaterra from '../../../assets/icons/inglaterra.png';
+import Portugal from '../../../assets/icons/portugal.png';
+import Franca from '../../../assets/icons/franca.png';
+
+
 const rotate = keyframes`
   from {
     transform: rotate(0deg);
@@ -51,7 +58,164 @@ export const Logo = Styled.span`
     }
 `
 
+export const Idioma = Styled.div`
+    float:right;
+    margin-left:40px;
+    cursor:pointer;
+    span{
+        float:right;
+        display:block;
+        height: 26px;
+        width: 36px;
+        background-size:contain;
+    }
+    .brasil{ background:url(${Brasil})}
+    i{
+        animation: ${rotateNormal} 0.5s forwards;
+        float:right;
+        display:block;
+        height: 7px;
+        width: 12px;
+        background: url(${ArrowBottom});
+        margin-top:10px;
+        margin-left:10px;
+    }
+    &:hover{
+        i{
+            animation: ${rotate} 0.5s forwards;
+        }
+        div{
+            display:inherit
+        }
+    }
+    div{
+        height: 50px;
+        display:none;
+        ul{
+            padding: 0px;
+            position:absolute;
+            width: 36px;
+            height:165px;
+            border-radius: 4px;
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+            z-index:99999;
+            margin-top:49px;
+            background:#fff;
+            list-style:none;
+            padding: 16px 8px;
+              
+                span{
+                    display:block;
+                    height: 26px;
+                    width: 36px;
+                    margin:0 auto;
+                    margin-bottom:8px;
+                }
+            span:nth-child(1){background:url(${Brasil});}
+            span:nth-child(2){background:url(${Portugal});}
+            span:nth-child(3){background:url(${Inglaterra});}
+            span:nth-child(4){background:url(${Espanha});}
+            span:nth-child(5){background:url(${Franca});}
+          
+        }
+    }
+`
+
 export const Menubox = Styled.ul`
+    height:32px;
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    margin-left: 30px;
+    display:inline-block;
+    position:relative;
+    top:26px;
+    margin:0px;
+    margin-left:30px;
+    padding:0px;
+    float:left;
+    width:630px;
+    li{
+        padding: 0px 10px;
+        border-radius: 4px;
+        min-height: 36px;
+        line-height:36px;
+        cursor: pointer;
+        float:left;
+        font-size: 16px;
+        list-style:none;
+        color: rgba(0, 0, 0, 0.6);
+        margin-left:18px;
+        cursor:pointer;
+        font-family:Poppins;
+        i {
+            animation: ${rotateNormal} 0.5s forwards;
+            float:right;
+            display:block;
+            height: 7px;
+            width: 12px;
+            background: url(${ArrowBottom});
+            margin-top:14px
+        }
+        &:hover{
+            a{color: #fff;}
+            background:#1B98A7;
+            i{
+                animation: ${rotate} 0.5s forwards;
+            }
+            div{display:inherit}         
+        }
+        div{
+            height: 50px;
+            display:none;
+            ul{
+                display:block;
+                height: 136px;
+                width: 139px;             
+                border-radius: 4px;
+                background:#fff;
+                position:absolute;
+                box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                z-index:99999;
+                margin-top:49px;
+                margin-left:0px;
+                padding-left:0px;
+            }
+        }
+
+        a{
+            text-decoration:none;
+            color: rgba(0, 0, 0, 0.6);
+            
+        }
+    }
+
+    #menuservico{        
+        background: transparent;
+        a{
+            padding: 7px 10px;
+            border-radius: 4px;
+            min-height: 36px;
+        }
+        ul{height:auto}
+        &:hover{
+            a{
+                background:#1B98A7;
+            }
+            
+        }
+        li{
+            margin-left:0px;
+            width: 139px;
+            padding:0px;
+            text-indent:5px;
+            &:hover{
+                color:#fff;
+            }
+        }
+    }
+`;
+
+/* export const Menubox = Styled.ul`
     height:32px;
     border-left: 1px solid rgba(0, 0, 0, 0.12);
     margin-left: 30px;
@@ -156,7 +320,7 @@ export const Menubox = Styled.ul`
         
     }
   
-`
+`*/
 
 export const MenuBoxRight = Styled.div`
     height:32px;

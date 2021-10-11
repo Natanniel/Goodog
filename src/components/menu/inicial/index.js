@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 // import { Container } from './styles';
-import { NavMenu, LabelNomeUsuario, ImgUser, MenuContainer, Logo, Menubox, BtnEntrar, MenuBoxRight, CriarConta } from './styled';
+import { NavMenu, LabelNomeUsuario, ImgUser, MenuContainer, Logo, Idioma, Menubox, BtnEntrar, MenuBoxRight, CriarConta } from './styled';
 import { SocialR, CriarContaR, MenuR, SeparatorFR, SeparatorR, EntrarR, ResponsiveR, NavMenuResponsive, NavMenuResponsiveLogado, Sidebar, LogoR, ReturnLogo } from './styledResponsive';
 
 import DialogSignup from '../../dialogs/signup'
@@ -107,10 +107,10 @@ function Menu({ nav }) {
                         <Logo />
                     </Link>
                     <Menubox>
-                        <li style={{ width: '80px', height: 300, width: 100 }}><a href="#">Serviço</a><i></i>
+                        <li id={"menuservico"} style={{ width: 100 }}><a href="#">Serviço</a><i></i>
                             <div>
                                 <ul>
-                                    <li>Hospedagem </li>
+                                    <li>Hospedagem</li>
                                     <li>Creche</li>
                                     <li>Babá</li>
                                     <li>Passeio</li>
@@ -121,7 +121,6 @@ function Menu({ nav }) {
                         <li><a href="#fazer_parte">Fazer parte</a></li>
                         <li><a href="#duvidas">Dúvidas</a></li>
                         <li><a href="#">Blog</a></li>
-
                     </Menubox>
                     <MenuBoxRight>
                         {logado ? (
@@ -138,13 +137,32 @@ function Menu({ nav }) {
                                     </div>
                                 </LabelNomeUsuario>
                                 <ImgUser></ImgUser>
+                                <Idioma>
+                                    <span className='brasil' />
+                                    <i></i>
+                                    <div></div>
+                                </Idioma>
                             </div>
                         ) : (
                             <div>
                                 <CriarConta id='criarconta' onClick={() => setVisivel(true)}>Criar conta</CriarConta>
                                 <BtnEntrar onClick={() => setVisivelLogin(true)}>Entrar</BtnEntrar>
+                                <Idioma>
+                                    <i></i>
+                                    <span className='brasil' />
+                                    <div>
+                                        <ul>
+                                            <span />
+                                            <span />
+                                            <span />
+                                            <span />
+                                            <span />
+                                        </ul>
+                                    </div>
+                                </Idioma>
                             </div>
                         )}
+
                     </MenuBoxRight>
                 </MenuContainer>
                 {visivel ? <DialogSignup fechar={fecharModalSignup} /> : null}
