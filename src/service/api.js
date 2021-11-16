@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //var host = 'http://localhost:3000';
-var host = 'https://nfe.apolluz.com';
+var host = 'https://api.goodog.pet';
 
 // DEV
 const api = axios.create({

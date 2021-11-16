@@ -5,9 +5,8 @@ import { Route, Router } from "react-router-dom"; // importando o BrowserRouter 
 import Autenticacao from '../pages/autenticacao/login/index'
 import RecuperaSenha from '../pages/autenticacao/recoverPassword/index'
 
-import Menu from '../components/menu'
+import Menu from '../components/menu/index'
 
-import TopMenu from '../components/admin/topMenu';
 import Dashboard from '../pages/admin/dashboard';
 import Aprovacao from '../pages/admin/aprovacao';
 

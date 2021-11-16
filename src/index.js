@@ -16,14 +16,17 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <GlobalStyle />
+    
       <Route path="/" component={Cliente} />
       <Route path="/admin" component={Admin} />
+    
       {/*     
       <Route path="/auth" exact component={Site} />
       <Route path="/recuperarsenha" exact component={Recover} />
       
       <Route path="/app" component={App} />
       */}
+  
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

@@ -19,6 +19,7 @@ const rotate = keyframes`
     transform: rotate(180deg);
   }
 `;
+
 const rotateNormal = keyframes`
   from {
     transform: rotate(180deg);
@@ -27,6 +28,31 @@ const rotateNormal = keyframes`
     transform: rotate(0deg);
   }
 `;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    top:5px;
+  }
+  to {
+    opacity: 1;
+    top:0px;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+    top:0px;
+  }
+  to {
+    opacity: 0;
+    top:5px;
+  }
+`;
+
+
+
 
 export const NavMenu = Styled.nav`
     height:85px;
@@ -161,11 +187,19 @@ export const Menubox = Styled.ul`
             i{
                 animation: ${rotate} 0.5s forwards;
             }
-            div{display:inherit}         
+            div{
+                height: 50px;  
+                display:inherit;
+                animation: ${fadeIn} 0.5s forwards;
+            }         
         }
         div{
-            height: 50px;
-            display:none;
+            height: 0px;            
+            z-index:1000;
+            width:139px;
+            position:absolute;
+            opacity: 0;
+            animation: ${fadeOut} 0.2s forwards;
             ul{
                 display:block;
                 height: 136px;

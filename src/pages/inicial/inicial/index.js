@@ -31,7 +31,7 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 function Inicial({ navigation }) {
 
     let [selected, setSelected] = useState("hospedagem")
-
+    
 
     return (
         <div>

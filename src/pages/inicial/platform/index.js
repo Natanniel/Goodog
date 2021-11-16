@@ -21,6 +21,8 @@ function Inicial() {
         </GoogleMap>
     ))
 
+    throw new Error('');
+
 
     return (
         <div>
